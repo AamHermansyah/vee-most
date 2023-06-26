@@ -130,7 +130,7 @@ const Products = () => {
                             MSRP $7,071.41 EXCL TAX
                           </Typography>
                         </div>
-                        <div className="flex">
+                        <div className="flex gap-2 mt-8">
                           <div className="flex border-2 rounded-md border-gray-400">
                             <button
                               onClick={() => updateQuantity(id, -1)}
@@ -148,9 +148,16 @@ const Products = () => {
                               +
                             </button>
                           </div>
-                          <Button>
-                            <img src={cart.src} alt="Cart" className="mr-2 w-[25px] h-[25px]" />
-                          </Button>
+                          <button
+                            className="flex items-center justify-center p-2 w-[50px] h-[35px]"
+                            style={{
+                              backgroundImage: `url(${cart.src})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              backgroundRepeat: "no-repeat",
+                            }}
+                          >
+                          </button>
                         </div>
                       </div>
                     </div>
