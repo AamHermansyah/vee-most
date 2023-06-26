@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ["Source Code Pro"],
+        secondary: ["League Spartan"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

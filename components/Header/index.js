@@ -41,7 +41,7 @@ const Header = () => {
               height={40}
               width={300}
             />
-            <QuickQuote />
+            <QuickQuote title={"Quick Quote"} />
             <ShoppingCartOutlined
               sx={{
                 fontSize: 40,

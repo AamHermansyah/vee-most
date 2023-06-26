@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Dot from "../Dot";
 import Image from "next/image";
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
+import LearnMore from "../LearnMore";
 
 const HeroSlider = ({ imageToDisplay, setImageToDisplay }) => {
   return (
@@ -73,17 +74,7 @@ const HeroSlider = ({ imageToDisplay, setImageToDisplay }) => {
                     {item.desc}
                   </h5>
                   <div>
-                    <div className="h-[30px] w-[150px] font-[500] p-2 rounded-full bg-[#D7AA12] flex justify-center items-center text-white uppercase relative">
-                      <p className="ml-[20px]">Learn More</p>
-                      <div className="absolute animate-pulse left-0 top-0 bg-white h-[30px] w-[30px] rounded-full flex items-center justify-center">
-                        <KeyboardDoubleArrowRight
-                          sx={{
-                            color: "#D7AA12",
-                            fontSize: 20,
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <LearnMore />
                   </div>
                 </div>
               </>

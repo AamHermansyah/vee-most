@@ -4,8 +4,9 @@ import Hero from "@/components/Hero";
 import HeroSlider from "@/components/HeroSlider";
 import bgHero from "../assets/bg-hero.png";
 import bgHeroLeft from "../assets/bg-hero_left.png";
+import bgSection2 from "../assets/bg-section-2.png";
 import { useEffect, useState } from "react";
-import useWindowDimensions from "@/hooks/getWindowsDimension";
+import Section2 from "@/components/Section2";
 
 const appearance = [
   {
@@ -54,7 +55,7 @@ export default function Home() {
               <div
                 key={item.id}
                 className={[
-                  "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30",
+                  "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30 bg-center bg-cover",
                   item.isActive ? "block" : "hidden",
                 ].join(" ")}
                 style={{
@@ -66,7 +67,7 @@ export default function Home() {
               <div
                 key={item.id}
                 className={[
-                  "absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30",
+                  "absolute w-full h-full bg-no-repeat top-0 right-0 opacity-30 bg-center bg-cover",
                   item.isActive ? "block" : "hidden",
                 ].join(" ")}
                 style={{
@@ -85,7 +86,15 @@ export default function Home() {
           />
         </div>
       </header>
-      <main className="h-screen"></main>
+      {/* Section 2 */}
+      <main
+        className="h-screen bg-no-repeat bg-center bg-cover flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${bgSection2.src})`,
+        }}
+      >
+        <Section2 />
+      </main>
     </>
   );
 }
