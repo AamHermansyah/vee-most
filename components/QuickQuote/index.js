@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 
-const QuickQuote = () => {
+const QuickQuote = ({ title }) => {
   return (
     <div className="relative">
       <div className="flex items-center justify-center rounded-full p-1">
         <div className="bg-[#D7AA12] p-2 rounded-full text-white text-[14px] h-[31px] flex items-center justify-center">
-          Quick Quote
+          {title}
         </div>
       </div>
       <div className="w-[108px] h-[40px] -z-30 absolute top-0 right-0 bg-[#D7AA12] rounded-full" />
