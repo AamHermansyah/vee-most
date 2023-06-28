@@ -5,7 +5,7 @@ import HeroSlider from "../HeroSlider";
 
 const Hero = () => {
   return (
-    <div className="w-[90%] mx-auto py-4 h-[20vh]">
+    <div className="w-[90%] mx-auto py-4 h-[25vh]">
       <Header />
     </div>
   );

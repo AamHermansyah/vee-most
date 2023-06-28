@@ -1,96 +1,64 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Dot from "../Dot";
+import React from "react";
 import Image from "next/image";
-import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import LearnMore from "../LearnMore";
 
-const HeroSlider = ({ imageToDisplay, setImageToDisplay }) => {
+const HeroSlider = ({ item }) => {
   return (
-    <div className="h-full relative">
-      <div className="flex items-center justify-center w-full h-full">
-        {imageToDisplay.map((item) => (
-          <div
+    <div
+      className={[
+        "bg-no-repeat bg-cover w-full min-h-[75vh] lg:h-[75vh]",
+        item.isActive ? "absolute z-10" : "hidden",
+        item.position ? item.position : "bg-center",
+      ].join(" ")}
+      style={{
+        backgroundImage:
+          item.isVisibleBackground && `url(${item.background.src})`,
+      }}
+    >
+      <div
+        className={[
+          "w-full h-full flex items-center justify-between gap-y-10 lg:gap-y-0",
+          item.isLeft
+            ? "flex-col lg:flex-row-reverse"
+            : "flex-col-reverse lg:flex-row",
+        ].join(" ")}
+      >
+        <div
+          className={[
+            "flex-[0.5] h-full flex items-center justify-center",
+          ].join(" ")}
+        >
+          {item.imageUrl && (
+            <Image
+              src={item.imageUrl}
+              alt={item.title}
+              className="w-[50%] lg:w-full mx-20"
+            />
+          )}
+        </div>
+        <div className="flex-[0.5] h-full flex flex-col items-center justify-center gap-4">
+          <h1
             className={[
-              "items-start justify-evenly w-full",
-              item.isActive ? "flex" : "hidden",
+              "text-3xl lg:text-6xl font-secondary font-bold text-center w-[75%] mx-auto",
+              item.imageUrl ? "text-black" : "text-white",
             ].join(" ")}
-            key={item.id}
           >
-            {item.id % 2 === 0 ? (
-              <>
-                <div className="flex-[0.5] flex flex-col items-center justify-center gap-4">
-                  <h2
-                    className={[
-                      "text-[50px] font-bold text-center leading-[50px]",
-                    ].join(" ")}
-                  >
-                    {item.title}
-                  </h2>
-                  <h5 className="w-[350px] text-[20px] font-[400] text-center">
-                    {item.desc}
-                  </h5>
-                  <div>
-                    <div className="h-[30px] w-[150px] font-[500] p-2 rounded-full bg-[#D7AA12] flex justify-center items-center text-white uppercase relative">
-                      <p className="ml-[20px]">Learn More</p>
-                      <div className="absolute animate-pulse left-0 top-0 bg-white h-[30px] w-[30px] rounded-full flex items-center justify-center">
-                        <KeyboardDoubleArrowRight
-                          sx={{
-                            color: "#D7AA12",
-                            fontSize: 20,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Image
-                  src={item.imageUrl}
-                  className={["flex-[0.5]"]}
-                  width={600}
-                  height={600}
-                  alt="hero-image"
-                />
-              </>
-            ) : (
-              <>
-                <Image
-                  src={item.imageUrl}
-                  className={["flex-[0.5]"]}
-                  width={600}
-                  height={600}
-                  alt="hero-image"
-                />
-                <div className="flex-[0.5] flex flex-col items-center justify-center gap-4">
-                  <h2
-                    className={[
-                      "text-[50px] font-bold text-center leading-[50px]",
-                    ].join(" ")}
-                  >
-                    {item.title}
-                  </h2>
-                  <h5 className="w-[350px] text-[20px] font-[400] text-center">
-                    {item.desc}
-                  </h5>
-                  <div>
-                    <LearnMore />
-                  </div>
-                </div>
-              </>
-            )}
+            {item.title}
+          </h1>
+          <p
+            className={[
+              "font-[400] text-lg lg:text-2xl text-center w-[75%] mx-auto",
+              item.imageUrl ? "text-black" : "text-white",
+            ].join(" ")}
+          >
+            {item.desc}
+          </p>
+          <div className="w-full flex items-center justify-center">
+            <LearnMore />
           </div>
-        ))}
-      </div>
-      <div className="absolute bottom-20 left-0 w-full flex items-center justify-start gap-4">
-        {imageToDisplay.map((item) => (
-          <Dot
-            key={item.id}
-            item={item}
-            setImageToDisplay={setImageToDisplay}
-            imageToDisplay={imageToDisplay}
-          />
-        ))}
+        </div>
       </div>
     </div>
   );

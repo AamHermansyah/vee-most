@@ -1,0 +1,76 @@
+import { PersonOutline, ShoppingCartOutlined } from "@mui/icons-material";
+import Image from "next/image";
+import logo from "../../assets/VeeMost_Smart_Store.png";
+import icon_1 from "../../assets/icon_1.webp";
+import icon_2 from "../../assets/icon_2.webp";
+import icon_3 from "../../assets/icon_3.webp";
+import React from "react";
+
+const image_content = [
+  {
+    id: 1,
+    icon: icon_1,
+    title: "Tech Support",
+  },
+  {
+    id: 2,
+    icon: icon_2,
+    title: "Tech Deals",
+  },
+  {
+    id: 3,
+    icon: icon_3,
+    title: "Track Order",
+  },
+];
+
+const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
+  return (
+    <section className="h-screen flex items-center justify-center mt-2">
+      <div className="h-full w-[90%] mx-auto">
+        <div className="w-full h-[15vh] flex items-center justify-center relative">
+          {isVisibleLogo && (
+            <Image src={logo} alt="Logo" className="w-[300px]" />
+          )}
+          <div className="absolute flex gap-4 justify-end items-center right-0">
+            <ShoppingCartOutlined
+              sx={{
+                fontSize: 40,
+                color: "#000000",
+              }}
+            />
+            <PersonOutline
+              sx={{
+                fontSize: 40,
+                color: "#000000",
+              }}
+            />
+          </div>
+        </div>
+        <div className="w-full h-[85vh] flex flex-col items-center justify-center gap-20">
+          <h1 className="text-6xl font-secondary font-bold text-black text-center">
+            {title}
+          </h1>
+          <div className="w-full flex justify-around items-center">
+            {image_content.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col items-center justify-center gap-4"
+              >
+                <Image src={item.icon} alt={item.title} className="w-[150px]" />
+                <p className="text-xl text-black font-[400] font-primary">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+          <h4 className="text-2xl font-primary w-[50%] mx-auto font-[400] text-black text-center">
+            {desc}
+          </h4>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SectionTypeTwo;
