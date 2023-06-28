@@ -31,9 +31,9 @@ function Description() {
               Build for Security, IoT, Mobility, and Cloud
             </p>
             <p className="mb-4">
-              The Cisco@ Catalyst@ 9300 Series Switches are Cisco's lead stackable enterprise switching platform built for security, IOT, mobility, and cloud. They are the next generation of the industry's most
-              widely deployed switching platform. The Catalyst 9300 Series switches form the foundational building block for Software-Defined Access (SD-Access), Cisco's lead enterprise architecture. At 480
-              Gbps, they are the industry's highest-density stacking bandwidth solution with the most flexible uplink architecture. The Catalyst 9300 Series is the first optimized platform for high-density 802.11 ac
+              The Cisco@ Catalyst@ 9300 Series Switches are Cisco&apos;s lead stackable enterprise switching platform built for security, IOT, mobility, and cloud. They are the next generation of the industry&apos;s most
+              widely deployed switching platform. The Catalyst 9300 Series switches form the foundational building block for Software-Defined Access (SD-Access), Cisco&apos;s lead enterprise architecture. At 480
+              Gbps, they are the industry&apos;s highest-density stacking bandwidth solution with the most flexible uplink architecture. The Catalyst 9300 Series is the first optimized platform for high-density 802.11 ac
               Wave2. It sets new maximums for network scale. These switches are also ready for the future, with an x86 CPU architecture and more memory, enabling them to host containers and run third-party
               applications and scripts natively within the switch.
             </p>
