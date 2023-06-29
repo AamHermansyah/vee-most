@@ -53,9 +53,9 @@ export default function Home() {
           </React.Fragment>
         ))}
 
-        <div className="relative py-4">
-          <Header />
-        </div>
+        {/* <div className="relative py-4"> */}
+        <Header />
+        {/* </div> */}
 
         {imageToDisplay.map((item) => (
           <HeroSlider key={item.id} item={item} />

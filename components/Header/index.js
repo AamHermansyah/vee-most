@@ -32,17 +32,21 @@ const Header = ({ isNavFooterShow }) => {
   };
 
   return (
-    <header className="relative">
+    <header className="relative h-[30vh] md:h-[20vh] pt-3">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute h-[100vh] w-full">
           <div
-            className={["absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30"].join(" ")}
+            className={[
+              "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30",
+            ].join(" ")}
             style={{
               backgroundImage: `url(${bgHeroLeft.src})`,
             }}
           />
           <div
-            className={["absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30"].join(" ")}
+            className={[
+              "absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30",
+            ].join(" ")}
             style={{
               backgroundImage: `url(${bgHero.src})`,
             }}
@@ -53,7 +57,7 @@ const Header = ({ isNavFooterShow }) => {
       <div className="relative">
         <div className="px-4 sm:px-10">
           {!isNavFooterShow && (
-            <div className="mt-4 text-xs sm:text-base flex justify-end w-full gap-4">
+            <div className="text-xs sm:text-base flex justify-end w-full gap-4">
               {menu1.map((item) => (
                 <div
                   key={item.id}
@@ -122,7 +126,7 @@ const Header = ({ isNavFooterShow }) => {
                           <Popover.Button
                             className={`
                               ${open ? "text-[#D7AA12]" : "text-black"}
-                              group inline-flex items-center  hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                              group inline-flex items-center  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
                           >
                             <span>{item.title}</span>
                           </Popover.Button>
@@ -143,7 +147,9 @@ const Header = ({ isNavFooterShow }) => {
                                       <div key={item.name}>
                                         <div
                                           className="md:ml-4 flex justify-between w-full cursor-pointer"
-                                          onClick={(e) => handleChildren(e, item)}
+                                          onClick={(e) =>
+                                            handleChildren(e, item)
+                                          }
                                         >
                                           <p
                                             className={[
@@ -155,31 +161,42 @@ const Header = ({ isNavFooterShow }) => {
                                           >
                                             {item.name}
                                           </p>
-                                          <div className={`${item.id === activeId ? 'rotate-90' : '-rotate-90'} md:rotate-0`}>
+                                          <div
+                                            className={`${
+                                              item.id === activeId
+                                                ? "rotate-90"
+                                                : "-rotate-90"
+                                            } md:rotate-0`}
+                                          >
                                             <ChevronRight
                                               sx={{
-                                                color: `${item.id === activeId ? '#D7AA12' : 'inherit'}`,
+                                                color: `${
+                                                  item.id === activeId
+                                                    ? "#D7AA12"
+                                                    : "inherit"
+                                                }`,
                                               }}
                                             />
                                           </div>
                                         </div>
                                         <div className="md:hidden flex flex-col gap-4 justify-start items-start">
-                                          {item.id === activeId && item?.children?.map(
-                                            (item) =>
-                                            <p
-                                              key={item.id}
-                                              className="ml-4 text-sm font-medium text-black hover:text-[#D7AA12] cursor-pointer"
-                                            >
-                                              {item.name}
-                                            </p>
-                                          )}
+                                          {item.id === activeId &&
+                                            item?.children?.map((item) => (
+                                              <p
+                                                key={item.id}
+                                                className="ml-4 text-sm font-medium text-black hover:text-[#D7AA12] cursor-pointer"
+                                              >
+                                                {item.name}
+                                              </p>
+                                            ))}
                                         </div>
                                       </div>
                                     ))}
                                   </div>
                                   <div className="flex flex-col gap-4">
-                                    {productsMenu.find((item) => item.id === activeId)?.children
-                                      ?.map((item) => (
+                                    {productsMenu
+                                      .find((item) => item.id === activeId)
+                                      ?.children?.map((item) => (
                                         <p
                                           key={item.id}
                                           className="ml-4 text-sm font-medium text-black hover:text-[#D7AA12] cursor-pointer"
@@ -205,7 +222,7 @@ const Header = ({ isNavFooterShow }) => {
             </div>
           </div>
         </div>
-      </div>   
+      </div>
     </header>
   );
 };

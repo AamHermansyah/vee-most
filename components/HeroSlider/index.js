@@ -8,7 +8,7 @@ const HeroSlider = ({ item }) => {
   return (
     <div
       className={[
-        "bg-no-repeat bg-cover w-full h-[85vh] lg:h-[80vh]",
+        "bg-no-repeat bg-cover w-full h-[70vh] md:h-[80vh]",
         item.isActive ? "absolute z-10" : "hidden",
         item.position ? item.position : "bg-center",
       ].join(" ")}
