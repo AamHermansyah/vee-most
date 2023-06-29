@@ -57,7 +57,7 @@ export default function Home() {
         {imageToDisplay.map((item) => (
           <HeroSlider key={item.id} item={item} />
         ))}
-        <div className="absolute bottom-10 left-10 lg:left-40 w-full flex items-center justify-start gap-4 z-50">
+        <div className="absolute bottom-10 left-10 lg:left-40 w-full flex items-center justify-start gap-4 z-30">
           {imageToDisplay.map((item) => (
             <Dot
               key={item.id}
