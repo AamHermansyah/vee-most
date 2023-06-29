@@ -19,8 +19,8 @@ const Dot = ({ item, imageToDisplay, setImageToDisplay }) => {
   return (
     <div
       className={[
-        "w-[10px] h-[10px] lg:w-[20px] lg:h-[20px] rounded-full cursor-pointer",
-        item.isActive ? "bg-[#D7AA12]" : "bg-[#868686]",
+        "w-[15px] h-[15px] lg:w-[20px] lg:h-[20px] rounded-full cursor-pointer",
+        item.isActive ? "bg-[#D7AA12]" : "bg-[#eeeeee]",
       ].join(" ")}
       onClick={handleClick}
     />

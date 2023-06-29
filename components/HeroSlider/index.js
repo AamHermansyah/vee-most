@@ -8,7 +8,7 @@ const HeroSlider = ({ item }) => {
   return (
     <div
       className={[
-        "bg-no-repeat bg-cover w-full min-h-[75vh] lg:h-[75vh]",
+        "bg-no-repeat bg-cover w-full h-[85vh] lg:h-[75vh]",
         item.isActive ? "absolute z-10" : "hidden",
         item.position ? item.position : "bg-center",
       ].join(" ")}
@@ -19,7 +19,7 @@ const HeroSlider = ({ item }) => {
     >
       <div
         className={[
-          "w-full h-full flex items-center justify-between gap-y-10 lg:gap-y-0",
+          "w-full h-full flex items-center justify-center lg:justify-between gap-y-4 lg:gap-y-0",
           item.isLeft
             ? "flex-col lg:flex-row-reverse"
             : "flex-col-reverse lg:flex-row",
@@ -27,21 +27,28 @@ const HeroSlider = ({ item }) => {
       >
         <div
           className={[
-            "flex-[0.5] h-full flex items-center justify-center",
+            "flex-[0.5] h-full lg:items-center justify-center",
+            item.isVisibleBackground ? "hidden" : "flex",
+            item.isLeft ? "items-center" : "items-start",
           ].join(" ")}
         >
           {item.imageUrl && (
             <Image
               src={item.imageUrl}
               alt={item.title}
-              className="w-[50%] lg:w-full mx-20"
+              className="w-[50%] lg:w-full mx-20 -z-10"
             />
           )}
         </div>
-        <div className="flex-[0.5] h-full flex flex-col items-center justify-center gap-4">
+        <div
+          className={[
+            "flex-[0.5] h-full flex flex-col items-center lg:justify-center gap-4 w-[90%] mx-auto",
+            item.isLeft ? "justify-start" : "justify-center",
+          ].join(" ")}
+        >
           <h1
             className={[
-              "text-3xl lg:text-6xl font-secondary font-bold text-center w-[75%] mx-auto",
+              "text-4xl lg:text-6xl font-secondary font-bold text-center w-full lg:w-[75%] mx-auto",
               item.imageUrl ? "text-black" : "text-white",
             ].join(" ")}
           >
@@ -49,11 +56,19 @@ const HeroSlider = ({ item }) => {
           </h1>
           <p
             className={[
-              "font-[400] text-lg lg:text-2xl text-center w-[75%] mx-auto",
+              "font-[400] text-xl lg:text-2xl text-center w-full lg:w-[75%] mx-auto",
               item.imageUrl ? "text-black" : "text-white",
             ].join(" ")}
           >
-            {item.desc}
+            <span
+              className={[
+                item.imageUrl
+                  ? ""
+                  : "bg-black rounded-lg py-1 box-decoration-clone px-2",
+              ].join(" ")}
+            >
+              {item.desc}
+            </span>
           </p>
           <div className="w-full flex items-center justify-center">
             <LearnMore />

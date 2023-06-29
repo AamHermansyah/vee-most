@@ -35,15 +35,15 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
           <div className="absolute flex gap-4 justify-end items-center right-0">
             <ShoppingCartOutlined
               sx={{
-                fontSize: 40,
                 color: "#000000",
               }}
+              className="text-[30px] lg:text-[40px]"
             />
             <PersonOutline
               sx={{
-                fontSize: 40,
                 color: "#000000",
               }}
+              className="text-[30px] lg:text-[40px]"
             />
           </div>
         </div>
@@ -51,14 +51,18 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
           <h1 className="text-6xl font-secondary font-bold text-black text-center">
             {title}
           </h1>
-          <div className="w-full flex justify-around items-center">
+          <div className="w-full flex justify-around items-center flex-wrap gap-4 lg:gap-0">
             {image_content.map((item) => (
               <div
                 key={item.id}
                 className="flex flex-col items-center justify-center gap-4"
               >
-                <Image src={item.icon} alt={item.title} className="w-[150px]" />
-                <p className="text-xl text-black font-[400] font-primary">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-[50%] lg:w-[150px]"
+                />
+                <p className="text-lg lg:text-xl text-black font-[400] font-primary">
                   {item.title}
                 </p>
               </div>

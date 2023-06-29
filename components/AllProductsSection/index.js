@@ -32,21 +32,25 @@ const products = [
 
 const AllProductSection = () => {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center gap-10">
-      <p className="text-[20px] text-[#737373] font-[400]">
+    <section className="w-[90%] mx-auto h-screen flex flex-col items-center justify-center gap-10 ">
+      <p className="text-[14px] lg:text-[20px] text-[#737373] font-[400]">
         choose wisely, succeed effortlessly
       </p>
-      <h1 className="text-6xl w-[65%] mx-auto text-center font-bold font-secondary text-black">
+      <h1 className="text-4xl lg:text-6xl w-full lg:w-[65%] mx-auto text-center font-bold font-secondary text-black">
         Stay ahead of the curve with cutting-edge IT products, power your
         success today
       </h1>
-      <div className="flex justify-center items-center gap-20 relative">
+      <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-20 relative">
         {products.map((item) => (
           <p key={item.id} className="text-[16px] font-[500]">
             {item.title}
           </p>
         ))}
-        <Image src={icon} alt="icon" className="absolute -left-10 w-[30px]" />
+        <Image
+          src={icon}
+          alt="icon"
+          className="absolute left-0 -top-8 lg:top-0 lg:-left-10 w-[20px] lg:w-[30px]"
+        />
       </div>
       <QuickQuote title={"All Products"} />
     </section>
