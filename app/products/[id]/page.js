@@ -15,6 +15,7 @@ import printer from "../../../assets/printer.png";
 import mail from "../../../assets/mail.png";
 import blueMail from "../../../assets/mail-blue.png"
 import cart from "../../../assets/shopping-cart.png"
+import Hero from "@/components/Hero";
 
 const Products = () => {
   const [number, setNumber] = React.useState(1);
