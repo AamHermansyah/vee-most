@@ -4,7 +4,7 @@ import * as React from "react";
 import { useState } from "react";
 import bgHeroLeft from "../../assets/bg-hero_left.png";
 import bgHero from "../../assets/bg-hero.png";
-import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
@@ -150,8 +150,8 @@ function Description() {
         }}
       />
 
-      <div className="relative">
-        <Hero />
+      <div className="relative py-4">
+        <Header />
       </div>
 
       <main className="h-screen relative z-10 mt-6">
