@@ -11,19 +11,21 @@ function FilterProducts() {
             Selected Filter
           </h2>
           <button className="text-xs flex gap-4 items-center text-gray-500">
-            <span className="text-blue-500">
+            <span className="text-blue-500 whitespace-nowrap">
               Clear all
             </span>
             <CloseIcon />
           </button>
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
-          <span className="p-2 rounded-full border border-gray-700">
-            <b>Category:</b> Network Devices
-          </span>
-          <span className="p-2 rounded-full border border-gray-700">
-            <b>Sub Category:</b> Router & Components
-          </span>
+          <div className="flex flex-wrap gap-x-2 py-2 px-4 rounded-full border border-gray-700">
+            <b>Category:</b>
+            <span>Network Devices</span>
+          </div>
+          <div className="flex flex-wrap gap-x-2 py-2 px-4 rounded-full border border-gray-700">
+            <b>Sub Category:</b>
+            <span>Router & Components</span>
+          </div>
         </div>
       </div>
       <div>
@@ -66,7 +68,7 @@ function FilterProducts() {
                 <input
                   id="default-checkbox"
                   type="checkbox"
-                  checked={index === 0}
+                  defaultChecked={index === 0}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
                 />
                 <label

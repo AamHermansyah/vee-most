@@ -2,14 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import LearnMore from "../LearnMore";
+import LearnMore from "./LearnMore";
 
 const HeroSlider = ({ item }) => {
   return (
     <div
       className={[
-        "bg-no-repeat bg-cover w-full h-[85vh] lg:h-[80vh]",
-        item.isActive ? "absolute z-10" : "hidden",
+        "bg-no-repeat bg-cover w-full h-[600px] lg:h-[500px]",
+        item.isActive ? "z-10" : "hidden",
         item.position ? item.position : "bg-center",
       ].join(" ")}
       style={{
@@ -33,11 +33,13 @@ const HeroSlider = ({ item }) => {
           ].join(" ")}
         >
           {item.imageUrl && (
-            <Image
-              src={item.imageUrl}
-              alt={item.title}
-              className="w-[50%] lg:w-full mx-20 -z-10"
-            />
+            <div className="w-[50%]">
+              <Image
+                src={item.imageUrl}
+                alt={item.title}
+                className="w-full -z-10 object-contain"
+              />
+            </div>
           )}
         </div>
         <div

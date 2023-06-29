@@ -32,7 +32,7 @@ function Checkout() {
 
   return (
     <>
-      <Header isNavFooterShow={true} />
+      <Header isNavFooterHidden={true} />
       <main className="min-h-screen mt-6">
         <div className="bg-white">
           <div className="py-10 px-4 sm:px-10">

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Header from "../Header";
-import HeroSlider from "../HeroSlider";
+import Header from "../../Header";
+import HeroSlider from "./HeroSlider";
 
 const Hero = () => {
   return (

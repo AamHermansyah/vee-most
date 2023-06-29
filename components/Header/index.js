@@ -18,7 +18,7 @@ import productsMenu from "./productsMenu";
 import bgHeroLeft from "assets/bg-hero_left.png";
 import bgHero from "assets/bg-hero.png";
 
-const Header = ({ isNavFooterShow }) => {
+const Header = ({ isNavFooterHidden }) => {
   const router = useRouter();
   const [activeId, setActiveId] = useState(null);
 
@@ -34,7 +34,7 @@ const Header = ({ isNavFooterShow }) => {
   return (
     <header className="relative">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute h-[100vh] w-full">
+        <div className="absolute top-0 h-[100vh] w-full">
           <div
             className={["absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30"].join(" ")}
             style={{
@@ -50,15 +50,15 @@ const Header = ({ isNavFooterShow }) => {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="px-4 sm:px-10">
-          {!isNavFooterShow && (
-            <div className="mt-4 text-xs sm:text-base flex justify-end w-full gap-4">
+      <div className="relative pb-2 sm:pb-0">
+        <div className="pt-4 px-4 sm:px-10">
+          {!isNavFooterHidden && (
+            <div className="text-xs sm:text-base flex justify-end w-full gap-4">
               {menu1.map((item) => (
                 <div
                   key={item.id}
                   className={[
-                    "font-[500]",
+                    "font-[600]",
                     item.id % 2 === 0
                       ? "border-x-2 border-black px-2"
                       : "border-x-0",
@@ -90,8 +90,8 @@ const Header = ({ isNavFooterShow }) => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 justify-between items-start mt-2">
-              <div className="flex justify-start w-full gap-4">
+            <div>
+              <div className="flex md:justify-end w-full gap-4 mb-2 md:mb-4">
                 <div className="flex gap-x-4 gap-y-2 flex-wrap md:flex-nowrap">
                   <SearchInput
                     placeholder={"I'm looking for..."}
@@ -113,7 +113,7 @@ const Header = ({ isNavFooterShow }) => {
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2">
                 {menu2.map((item) =>
                   item.title === "Products" ? (
                     <Popover className="relative" key={item.id}>
@@ -196,7 +196,7 @@ const Header = ({ isNavFooterShow }) => {
                       )}
                     </Popover>
                   ) : (
-                    <Link href={item.link} key={item.id}>
+                    <Link href={item.link} key={item.id} className="whitespace-nowrap">
                       {item.title}
                     </Link>
                   )

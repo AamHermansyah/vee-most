@@ -1,7 +1,7 @@
 import React from "react";
-import QuickQuote from "../QuickQuote";
+import QuickQuote from "../../QuickQuote";
 import Image from "next/image";
-import icon from "../../assets/icon_5.png";
+import icon from "../../../assets/icon_5.png";
 
 const products = [
   {

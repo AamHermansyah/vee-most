@@ -19,7 +19,7 @@ const Login = () => {
 
   return (
     <>
-      <Header isNavFooterShow={true} />
+      <Header isNavFooterHidden={true} />
       <div className="min-h-screen mt-6">
         <div className="bg-white">
           <div className="p-4 md:p-8 lg:p-12 S">

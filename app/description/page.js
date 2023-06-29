@@ -122,7 +122,7 @@ function Description() {
 
   return (
     <>
-      <Header isNavFooterShow={true} />
+      <Header isNavFooterHidden={true} />
       <main className="mt-6 px-4 sm:px-10">
         <div className="bg-white">
           <div className="h-[35px] mt-2">
