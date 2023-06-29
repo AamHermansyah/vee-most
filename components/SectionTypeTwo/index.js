@@ -26,11 +26,11 @@ const image_content = [
 
 const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
   return (
-    <section className="h-screen flex items-center justify-center mt-2">
-      <div className="h-full w-[90%] mx-auto">
-        <div className="w-full h-[15vh] flex items-center justify-start lg:justify-center relative">
+    <section className="w-full min-h-screen flex items-center justify-center mt-2">
+      <div className="w-full h-full px-14">
+        <div className="w-full h-[200px] flex items-center justify-center relative">
           {isVisibleLogo && (
-            <Image src={logo} alt="Logo" className="w-[150px] lg:w-[300px]" />
+            <Image src={logo} alt="Logo" className="w-full max-w-[300px]" />
           )}
           <div className="absolute flex gap-4 justify-end items-center right-0">
             <ShoppingCartOutlined
@@ -47,8 +47,8 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
             />
           </div>
         </div>
-        <div className="w-full h-[85vh] flex flex-col items-center justify-center gap-10 lg:gap-20">
-          <h1 className="text-4xl lg:text-6xl font-secondary font-bold text-black text-center">
+        <div className="w-full min-h-[85vh] flex flex-col items-center justify-center gap-20">
+          <h1 className="text-6xl font-secondary font-bold text-black text-center">
             {title}
           </h1>
           <div className="w-full flex justify-around items-center flex-wrap gap-4 lg:gap-0">
@@ -68,7 +68,7 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
               </div>
             ))}
           </div>
-          <h4 className="text-xl lg:text-2xl font-primary w-full lg:w-[50%] mx-auto font-[400] text-black text-center">
+          <h4 className="text-2xl font-primary w-full max-w-[600px] mx-auto font-[400] text-black text-center">
             {desc}
           </h4>
         </div>
