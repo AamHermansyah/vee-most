@@ -39,7 +39,7 @@ const Login = () => {
         </div>
         <div className="h-screen relative z-10 mt-6">
           <div className="bg-white absolute inset-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-8 h-full gap-1 p-4 md:p-8 lg:p-12 S">
+            <div className="sm:mt-16 md:mt-16 lg:mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-8 h-full gap-1 p-4 md:p-8 lg:p-12 S">
               <div className="w-col-span-1 md:col-span-2 lg:col-span-4 row-span-1 " >
                 <div className="flex flex-col">
                   <h1 className="font-bold">
