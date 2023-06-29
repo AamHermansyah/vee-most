@@ -2,8 +2,6 @@
 
 import * as React from "react";
 import { useState } from "react";
-import bgHeroLeft from "../../assets/bg-hero_left.png";
-import bgHero from "../../assets/bg-hero.png";
 import Header from "@/components/Header";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
@@ -101,17 +99,6 @@ function Description() {
     }
   };
 
-  const renderTabLine = () => {
-    return (
-      <div className="flex">
-        <div className={`h-1 w-1/4 ${activeTab === 1 ? "bg-blue-500" : "bg-gray-300"}`} />
-        <div className={`h-1 w-1/4 ${activeTab === 2 ? "bg-blue-500" : "bg-gray-300"}`} />
-        <div className={`h-1 w-1/4 ${activeTab === 3 ? "bg-blue-500" : "bg-gray-300"}`} />
-        <div className={`h-1 w-1/4 ${activeTab === 4 ? "bg-blue-500" : "bg-gray-300"}`} />
-      </div>
-    );
-  };
-
   const breadcrumbs = [
     <Typography key="1" className="font-bold text-yellow-600">
       Home
@@ -134,29 +121,11 @@ function Description() {
   ];
 
   return (
-    <header className="h-[100vh] w-full relative">
-      <div
-        className={["absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30"].join(" ")}
-        style={{
-          backgroundImage: `url(${bgHeroLeft.src})`,
-        }}
-      />
-      <div
-        className={["absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30"].join(
-          " "
-        )}
-        style={{
-          backgroundImage: `url(${bgHero.src})`,
-        }}
-      />
-
-      <div className="relative py-4">
-        <Header />
-      </div>
-
-      <main className="h-screen relative z-10 mt-6">
-        <div className="absolute inset-0 bg-white">
-          <div className="h-[35px] absolute inset-y-0 inset-x-[10%] mt-2">
+    <>
+      <Header isNavFooterShow={true} />
+      <main className="mt-6 px-4 sm:px-10">
+        <div className="bg-white">
+          <div className="h-[35px] mt-2">
             <Stack spacing={2}>
               <Breadcrumbs
                 separator={<NavigateNextIcon fontSize="small" />}
@@ -166,40 +135,26 @@ function Description() {
               </Breadcrumbs>
             </Stack>
 
-            <div className="flex mt-4 space-x-4 justify-between">
-              <button
-                className={`tab-button ${activeTab === 1 ? "text-blue-500" : "text-black"} font-bold mx-[10px]`}
-                onClick={() => handleTabClick(1)}
-              >
-                Description
-              </button>
-              <button
-                className={`tab-button ${activeTab === 2 ? "text-blue-500" : "text-black"} font-bold mx-[10px]`}
-                onClick={() => handleTabClick(2)}
-              >
-                Technical Specification
-              </button>
-              <button
-                className={`tab-button ${activeTab === 3 ? "text-blue-500" : "text-black"} font-bold mx-[10px]`}
-                onClick={() => handleTabClick(3)}
-              >
-                Manufacturer Information
-              </button>
-              <button
-                className={`tab-button ${activeTab === 4 ? "text-blue-500" : "text-black"} font-bold mx-[10px]`}
-                onClick={() => handleTabClick(4)}
-              >
-                Warranty & Additional Information
-              </button>
+            <div className="overflow-x-auto">
+              <div className="w-full flex mt-10 md:border-b-[3px] border-gray-300">
+                {['Description', 'Technical Specification', 'Manufacturer Information', 'Warranty & Additional Information'].map((title, index) => (
+                  <button
+                    key={index}
+                    className={`tab-button ${activeTab === index + 1 ? "text-blue-500" : "text-black"} relative px-4 font-bold border-b-[3px] md:border-b-0 border-gray-300`}
+                    onClick={() => handleTabClick(index + 1)}
+                  >
+                    {title}
+                    <span className={`${activeTab === index + 1 ? 'bg-blue-500' : ''} absolute left-0 -bottom-[3px] w-full h-[3px]`} />
+                  </button>
+                ))}
+              </div>
             </div>
-
-
-            {renderTabLine()}
+            
             <div className="p-2 mt-4">{renderTabContent()}</div>
           </div>
         </div>
       </main>
-    </header>
+    </>
   );
 }
 
