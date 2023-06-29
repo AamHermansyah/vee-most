@@ -1,14 +1,14 @@
 import React from "react";
-import QuickQuote from "../../QuickQuote";
+import QuickQuote from "./QuickQuote";
 import Image from "next/image";
-import icon from "../../assets/icon_5.png";
-import bg2 from "../../assets/bg2.jpeg";
-import bg3 from "../../assets/bg_3.png";
-import bg4 from "../../assets/bgs4.png";
-import bg5 from "../../assets/bgs5.png";
-import bg6 from "../../assets/bgs6.png";
-import bg7 from "../../assets/bgs7.png";
-import bg1 from "../../assets/bg1.png";
+import icon from "../../../assets/icon_5.png";
+import bg2 from "../../../assets/bg2.jpeg";
+import bg3 from "../../../assets/bg_3.png";
+import bg4 from "../../../assets/bgs4.png";
+import bg5 from "../../../assets/bgs5.png";
+import bg6 from "../../../assets/bgs6.png";
+import bg7 from "../../../assets/bgs7.png";
+import bg1 from "../../../assets/bg1.png";
 
 const products = [
   {

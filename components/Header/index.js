@@ -10,7 +10,7 @@ import {
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import logo from "../../assets/logoheader.png";
-import QuickQuote from "../QuickQuote";
+import QuickQuote from "../pages/home/QuickQuote";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
@@ -32,7 +32,7 @@ const Header = ({ isNavFooterHidden }) => {
   };
 
   return (
-    <header className="relative h-[30vh] md:h-[20vh] pt-3">
+    <header className="relative">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 h-[100vh] w-full">
           <div
@@ -55,7 +55,7 @@ const Header = ({ isNavFooterHidden }) => {
       </div>
 
       <div className="relative pb-2 sm:pb-0">
-        <div className="pt-4 px-4 sm:px-10">
+        <div className="pt-2 px-4 sm:px-10">
           {!isNavFooterHidden && (
             <div className="text-xs sm:text-base flex justify-end w-full gap-4">
               {menu1.map((item) => (
@@ -95,7 +95,7 @@ const Header = ({ isNavFooterHidden }) => {
               </div>
             </div>
             <div>
-              <div className="flex md:justify-end w-full gap-4 mb-2 md:mb-4">
+              <div className="flex md:justify-end w-full gap-4 mb-2">
                 <div className="flex gap-x-4 gap-y-2 flex-wrap md:flex-nowrap">
                   <SearchInput
                     placeholder={"I'm looking for..."}
@@ -117,7 +117,7 @@ const Header = ({ isNavFooterHidden }) => {
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2">
+              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2 sm:pb-0">
                 {menu2.map((item) =>
                   item.title === "Products" ? (
                     <Popover className="relative" key={item.id}>
