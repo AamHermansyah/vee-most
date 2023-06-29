@@ -5,7 +5,7 @@ const QuickQuote = ({ title }) => {
   return (
     <div className="relative">
       <div className="flex items-center justify-center rounded-full p-1">
-        <div className="bg-[#D7AA12] p-2 rounded-full text-white text-[14px] h-[31px] flex items-center justify-center">
+        <div className="bg-[#D7AA12] p-2 rounded-full text-white text-[14px] h-[31px] flex items-center justify-center whitespace-nowrap">
           {title}
         </div>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Hero from "@/components/Hero";
 import HeroSlider from "@/components/HeroSlider";
 import bgHero from "../assets/bg-hero.png";
 import bgHeroLeft from "../assets/bg-hero_left.png";
@@ -13,6 +12,7 @@ import SectionTypeTwo from "@/components/SectionTypeTwo";
 import appearance from "./appearance";
 import Dot from "@/components/Dot";
 import AllProductSection from "@/components/AllProductsSection";
+import Header from "@/components/Header";
 
 export default function Home() {
   const [imageToDisplay, setImageToDisplay] = useState([]);
@@ -53,7 +53,10 @@ export default function Home() {
           </React.Fragment>
         ))}
 
-        <Hero />
+        <div className="relative py-4">
+          <Header />
+        </div>
+
         {imageToDisplay.map((item) => (
           <HeroSlider key={item.id} item={item} />
         ))}

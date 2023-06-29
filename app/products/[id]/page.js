@@ -4,7 +4,7 @@ import * as React from "react";
 import bgHeroLeft from "../../../assets/bg-hero_left.png";
 import bgHero from "../../../assets/bg-hero.png";
 import productPicture from "../../../assets/vee-store-product.png";
-import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
