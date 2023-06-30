@@ -35,29 +35,32 @@ function Checkout() {
       <main className="min-h-screen mt-6">
         <div className="bg-white">
           <div className="py-10 px-4 sm:px-10">
-            <div className="flex justify-between items-center">
-              <Stack spacing={2}>
-                <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-                  {breadcrumbs}
-                </Breadcrumbs>
-              </Stack>
-              <Button
-                variant="outlined"
-                sx={{
-                  fontSize: "0.75rem",
-                  padding: "4px 8px",
-                  borderRadius: "xl",
-                  borderColor: "black",
-                  color: "black",
-                }}
-              >
-                Quick Order
-              </Button>
+            <div className="max-w-[1000px] mx-auto">
+              <div className="flex justify-between items-center">
+                <Stack spacing={2}>
+                  <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
+                    {breadcrumbs}
+                  </Breadcrumbs>
+                </Stack>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    fontSize: "0.75rem",
+                    padding: "4px 8px",
+                    borderRadius: "xl",
+                    borderColor: "black",
+                    color: "black",
+                  }}
+                >
+                  Quick Order
+                </Button>
+              </div>
+              
+              <div className="flex gap-2 mt-4">
+                <Typography className="font-bold text-gray-700 text-2xl">My Cart</Typography>
+                <img src={edit.src} alt="Edit" className="mr-2 w-[25px] h-[25px]" />
+              </div>  
             </div>
-            <div className="flex gap-2 mt-4">
-              <Typography className="font-bold text-gray-700 text-2xl">My Cart</Typography>
-              <img src={edit.src} alt="Edit" className="mr-2 w-[25px] h-[25px]" />
-            </div>  
 
             <div className="max-w-[1000px] mx-auto relative overflow-x-auto">
               <table className="min-w-[900px] w-full text-sm text-left text-gray-500">
@@ -92,19 +95,17 @@ function Checkout() {
                       <img src={productPicture.src} className="w-[100px] h-[205px]" alt="Product" />  
                       <div className="w-full flex flex-col items-start justify-center">
                           <Button
-                          className="mr-8 mb-2 "
-                          variant="outlined"
-                          sx={{
-                            fontSize: "0.75rem",
-                            padding: "4px 8px",
-                            borderRadius: "xl",
-                            borderColor: "black",
-                            color: "black",
-                          }}
+                            className="text-xs rounded-full"
+                            variant="outlined"
+                            sx={{
+                              padding: "4px 8px",
+                              borderColor: "black",
+                              color: "black",
+                            }}
                         >
                           Spesial Price
                         </Button>
-                        <Typography className="font-bold text-black text-xs ">CISCO CERT REFURB 14X10GBE LAN WANPHY INTERFACE MOD</Typography>
+                        <Typography className="font-bold text-black text-xs mt-2">CISCO CERT REFURB 14X10GBE LAN WANPHY INTERFACE MOD</Typography>
                         <Typography className="text-black text-xs ">
                           Cisco CRS-3 1400tt 1 OGbE LAN/WAN-PHY Interface Module - For
                           Data Networking, Optical Network - 14 x Expansion Slots - XFP -
