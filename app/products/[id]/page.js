@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import bgHeroLeft from "../../../assets/bg-hero_left.png";
-import bgHero from "../../../assets/bg-hero.png";
 import productPicture from "../../../assets/vee-store-product.png";
 import Header from "@/components/Header";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -14,14 +12,13 @@ import Grid from "@mui/material/Grid";
 import printer from "../../../assets/printer.png";
 import mail from "../../../assets/mail.png";
 import blueMail from "../../../assets/mail-blue.png"
-import cart from "../../../assets/shopping-cart.png"
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const Products = () => {
   const [number, setNumber] = React.useState(1);
 
   const updateQuantity = (id, value) => {
-    uniqueItemsInCart.map((item) => item.id === id) &&
-      setNumber((prevState) => prevState + value);
+    setNumber((prevState) => prevState + value);
   }
 
   const breadcrumbs = [
@@ -49,7 +46,7 @@ const Products = () => {
     <>
       <Header />
       <main className="min-h-screen relative z-10 mt-6">
-        <div className="bg-white">
+        <div className="bg-white px-4 sm:px-10">
           <div className="h-[35px] mt-2">
             <Stack spacing={2}>
               <Breadcrumbs
@@ -59,47 +56,60 @@ const Products = () => {
                 {breadcrumbs}
               </Breadcrumbs>
             </Stack>
+            <Stack spacing={2} direction="row" className="justify-end mb-2">
+              <Button
+                className="rounded-full"
+                variant="outlined"
+                sx={{
+                  fontSize: "0.75rem",
+                  padding: "4px 8px",
+                  borderColor: "black",
+                  color: "black",
+                }}
+              >
+                Quick Order
+              </Button>
+            </Stack>
+            <div className="flex items-center justify-end mt-4">
+              <img src={printer.src} alt="Print" className="mr-2 w-[20px] h-[20px]" />
+              <Typography variant="body2" className="mr-4">
+                PRINT
+              </Typography>
+              <img src={mail.src} alt="Mail" className="mr-2 w-[20px] h-[20px]" />
+              <Typography variant="body2">MAIL</Typography>
+            </div>
             <Grid container spacing={2}>
-              <Grid item xs={4}>
-                <div className="w-auto h-auto mt-[100px]">
+              <Grid item xs={12} md={4}>
+                <div className="w-auto h-auto md:mt-[100px] aspect-video sm:aspect-auto">
                   <img src={productPicture.src} alt="Product" />
                 </div>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <div className="w-full h-auto mt-4 ">
-                  <Stack spacing={2} direction="row" className="justify-end mb-2">
-                    <Button
-                      variant="outlined"
-                      sx={{
-                        fontSize: "0.75rem",
-                        padding: "4px 8px",
-                        borderRadius: "xl",
-                        borderColor: "black",
-                        color: "black",
-                      }}
-                    >
-                      Quick Order
-                    </Button>
-                  </Stack>
-                  <div className="flex items-center justify-end">
-                    <img src={printer.src} alt="Print" className="mr-2 w-[25px] h-[25px]" />
-                    <Typography variant="body2" className="mr-4">
-                      PRINT
-                    </Typography>
-                    <img src={mail.src} alt="Mail" className="mr-2 w-[25px] h-[25px]" />
-                    <Typography variant="body2">MAIL</Typography>
-                  </div>
-                  <div className="font-bold text-sm mt-4">
+                  <div className="font-bold mt-4">
                     Cisco Catalyst 9300 24-port PoE+, Network Advantage - 24 Port -
                     Manageable - 2 Layer Supported - 715 W Power Consumption - Twisted
                     Pair - Rack Mountable - Lifetime Limited Warranty
                   </div>
-                  <div className="flex justify-between mt-10">
-                    <div className="grid grid-cols-2 gap-4 mt-4">
-                      <Typography variant="body1"><strong>VPN: </strong>C9300-24-P-A</Typography>
-                      <Typography variant="body1"><strong>SKU: </strong>9Y6451</Typography>
-                      <Typography variant="body1"><strong>UPC: </strong>08897280051682</Typography>
-                      <Typography variant="body1"><strong>By: </strong>Cisco</Typography>
+                  <div className="flex flex-col md:flex-row flex-wrap justify-between items-start md:mt-10">
+                    <div>
+                      <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1">
+                        <Typography variant="body1"><strong>VPN: </strong>C9300-24-P-A</Typography>
+                        <Typography variant="body1"><strong>SKU: </strong>9Y6451</Typography>
+                        <Typography variant="body1"><strong>UPC: </strong>08897280051682</Typography>
+                        <Typography variant="body1"><strong>By: </strong>Cisco</Typography>
+                      </div>
+                      <span className="block font-bold text-yellow-600 mt-4">End User Information Required</span>
+                      <Button
+                        variant="contained"
+                        className="text-red-700 mt-4 bg-red-100 rounded-[50px] hover:bg-red-200"
+                      >
+                        Out of Stock
+                      </Button>
+                      <div className="flex mt-4 ">
+                        <img src={blueMail.src} alt="Mail" className="mr-2 w-[25px] h-[25px]" />
+                        <span className="text-blue-500">Notify Me When Available</span>
+                      </div>
                     </div>
                     <div className="flex flex-col justify-center">
                       <div className="mr-4 flex-col flex-wrap" >
@@ -109,48 +119,27 @@ const Products = () => {
                         </Typography>
                       </div>
                       <div className="flex gap-2 mt-8">
-                        <div className="flex border-2 rounded-md border-gray-400">
+                        <div className="flex-1 flex justify-between border-2 rounded-md">
                           <button
-                            onClick={() => updateQuantity(id, -1)}
-                            className="px-2 py-1 text-gray-700 bg-gray-100"
+                            onClick={() => updateQuantity(1, -1)}
+                            className="px-2 py-1 text-gray-700"
                           >
                             -
                           </button>
-                          <p className="px-2 py-1 border-r-2 border-l-2 border-solid border-slate-100">
+                          <p className="px-2 py-1">
                             {number}
                           </p>
                           <button
-                            onClick={() => updateQuantity(id, 1)}
-                            className="px-2 py-1 text-gray-700 bg-gray-100"
+                            onClick={() => updateQuantity(1, 1)}
+                            className="px-2 py-1 text-gray-700"
                           >
                             +
                           </button>
                         </div>
-                        <button
-                          className="flex items-center justify-center p-2 w-[50px] h-[35px]"
-                          style={{
-                            backgroundImage: `url(${cart.src})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat",
-                          }}
-                        >
+                        <button className="flex-1 px-2 py-1 rounded-md bg-blue-500 text-white">
+                          <AddShoppingCartIcon fontSize="small" />
                         </button>
                       </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold text-red-600 mt-4">End User Information Required</div>
-                    <Button
-                      variant="contained"
-                      className="text-red-700 mt-4"
-                      style={{ backgroundColor: "#CCCCCC", borderRadius: "50px" }}
-                    >
-                      Out of Stock
-                    </Button>
-                    <div className="flex mt-4 ">
-                      <img src={blueMail.src} alt="Mail" className="mr-2 w-[25px] h-[25px]" />
-                      <span className="text-blue-500">Notify Me When Available</span>
                     </div>
                   </div>
                 </div>

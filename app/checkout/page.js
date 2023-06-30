@@ -9,7 +9,6 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import edit from "../../assets/edit.png";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-import { Grid } from "@mui/material";
 import productPicture from "../../assets/vee-store-product.png";
 import trash from "../../assets/delete.png"
 import save from "../../assets/floppy-disk.png"
