@@ -1,14 +1,15 @@
 import React from "react";
 import QuickQuote from "./QuickQuote";
 import Image from "next/image";
-import icon from "../../../assets/icon_5.png";
-import bg2 from "../../../assets/bg2.jpeg";
-import bg3 from "../../../assets/bg_3.png";
-import bg4 from "../../../assets/bgs4.png";
-import bg5 from "../../../assets/bgs5.png";
-import bg6 from "../../../assets/bgs6.png";
-import bg7 from "../../../assets/bgs7.png";
-import bg1 from "../../../assets/bg1.png";
+import icon from "../../assets/icon_5.png";
+import bg2 from "../../assets/bg2.jpeg";
+import bg3 from "../../assets/bg_3.png";
+import bg4 from "../../assets/bgs4.png";
+import bg5 from "../../assets/bgs5.png";
+import bg6 from "../../assets/bgs6.png";
+import bg7 from "../../assets/bgs7.png";
+import bg1 from "../../assets/bg1.png";
+import CardProduct from "../CardProduct";
 
 const products = [
   {
@@ -39,12 +40,7 @@ const products = [
 
 const AllProductSection = () => {
   return (
-    <section
-      className="relative px-4 w-full h-screen bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-10"
-      // style={{
-      //   backgroundImage: `url(${bg.src})`,
-      // }}
-    >
+    <section className="relative px-4 w-full py-10 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-10">
       <p className="text-[14px] lg:text-[20px] text-[#737373] font-[400]">
         choose wisely, succeed effortlessly
       </p>
@@ -65,40 +61,52 @@ const AllProductSection = () => {
         />
       </div>
       <QuickQuote title={"All Products"} />
-      <Image
-        src={bg2}
-        alt="icon"
-        className="absolute right-0 bottom-[20%] lg:bottom-[40%] w-[80px] sm:w-[100px] lg:w-[200px]"
-      />
-      <Image
-        src={bg3}
-        alt="icon"
-        className="absolute right-10 lg:right-40 bottom-10 w-[80px] sm:w-[100px] lg:w-[200px]"
-      />
-      <Image
-        src={bg4}
-        alt="icon"
-        className="absolute right-[40%] bottom-5 w-[80px] sm:w-[100px] lg:w-[150px]"
-      />
-      <Image
-        src={bg5}
-        alt="icon"
-        className="absolute left-10 lg:left-40 bottom-10 w-[80px] sm:w-[100px] lg:w-[200px]"
-      />
-      <Image
-        src={bg6}
-        alt="icon"
-        className="absolute left-0 bottom-[20%] lg:bottom-[40%] w-[80px] sm:w-[100px] lg:w-[150px]"
-      />
+      <div className="grid lg:grid-cols-5 gap-8 lg:gap-4 grid-cols-2 md:grid-cols-4">
+        <CardProduct
+          data={{
+            name: "Power Edge",
+            image: bg2,
+            price: "50000",
+          }}
+        />
+        <CardProduct
+          data={{
+            name: "Router",
+            image: bg6,
+            price: "50000",
+          }}
+        />
+        <CardProduct
+          data={{
+            name: "Monitor",
+            image: bg3,
+            price: "50000",
+          }}
+        />
+        <CardProduct
+          data={{
+            name: "Phone",
+            image: bg4,
+            price: "50000",
+          }}
+        />
+        <CardProduct
+          data={{
+            name: "Switch",
+            image: bg5,
+            price: "50000",
+          }}
+        />
+      </div>
       <Image
         src={bg1}
         alt="icon"
-        className="absolute right-0 top-0 w-[100px] md:w-[200px] lg:w-[300px]"
+        className="absolute right-0 top-0 w-[100px] md:w-[100px] lg:w-[200px] hidden lg:block"
       />
       <Image
         src={bg7}
         alt="icon"
-        className="absolute left-0 top-0 w-[200px] md:w-[300px] lg:w-[400px]"
+        className="absolute left-0 top-0 w-[100px] lg:w-[200px] hidden lg:block"
       />
     </section>
   );
