@@ -1,15 +1,15 @@
 import React from "react";
 import QuickQuote from "./QuickQuote";
 import Image from "next/image";
-import icon from "../../assets/icon_5.png";
-import bg2 from "../../assets/bg2.jpeg";
-import bg3 from "../../assets/bg_3.png";
-import bg4 from "../../assets/bgs4.png";
-import bg5 from "../../assets/bgs5.png";
-import bg6 from "../../assets/bgs6.png";
-import bg7 from "../../assets/bgs7.png";
-import bg1 from "../../assets/bg1.png";
-import CardProduct from "../CardProduct";
+import icon from "../../../assets/icon_5.png";
+import bg2 from "../../../assets/bg2.jpeg";
+import bg3 from "../../../assets/bg_3.png";
+import bg4 from "../../../assets/bgs4.png";
+import bg5 from "../../../assets/bgs5.png";
+import bg6 from "../../../assets/bgs6.png";
+import bg7 from "../../../assets/bgs7.png";
+import bg1 from "../../../assets/bg1.png";
+import CardProduct from "./CardProduct";
 
 const products = [
   {
@@ -61,40 +61,40 @@ const AllProductSection = () => {
         />
       </div>
       <QuickQuote title={"All Products"} />
-      <div className="grid lg:grid-cols-5 gap-8 lg:gap-4 grid-cols-2 md:grid-cols-4">
+      <div className="grid lg:grid-cols-5 gap-4 sm:gap-8 grid-cols-2 md:grid-cols-4">
         <CardProduct
           data={{
             name: "Power Edge",
             image: bg2,
-            price: "50000",
+            price: "$10",
           }}
         />
         <CardProduct
           data={{
             name: "Router",
             image: bg6,
-            price: "50000",
+            price: "$10",
           }}
         />
         <CardProduct
           data={{
             name: "Monitor",
             image: bg3,
-            price: "50000",
+            price: "$10",
           }}
         />
         <CardProduct
           data={{
             name: "Phone",
             image: bg4,
-            price: "50000",
+            price: "$10",
           }}
         />
         <CardProduct
           data={{
             name: "Switch",
             image: bg5,
-            price: "50000",
+            price: "$10",
           }}
         />
       </div>

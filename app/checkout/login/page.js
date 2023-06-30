@@ -132,7 +132,7 @@ const Login = () => {
                   <h2 className="font-bold mb-4">
                     Order Summary
                   </h2>
-                  <h2 className="font-bold text-sm border-b-2 border-gray-900 mb-2">
+                  <h2 className="font-bold text-sm border-b-2 border-gray-400 mb-2">
                     1 Item in Cart
                   </h2>
                   <div className="flex my-4 justify-around">

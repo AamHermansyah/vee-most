@@ -20,7 +20,7 @@ const CardProduct = ({ data }) => {
           />
         </div>
       )}
-      <div className="min-h-[75px] flex flex-col justify-between px-10 py-8">
+      <div className="min-h-[75px] flex flex-col justify-between px-2 sm:px-10 py-2 sm:py-8">
         <div>
           <Typography
             variant="subtitle2"
