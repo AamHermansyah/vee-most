@@ -94,17 +94,9 @@ function Checkout() {
                     <td className="w-full flex gap-2 px-6 py-4">
                       <img src={productPicture.src} className="w-[100px] h-[205px]" alt="Product" />  
                       <div className="w-full flex flex-col items-start justify-center">
-                          <Button
-                            className="text-xs rounded-full"
-                            variant="outlined"
-                            sx={{
-                              padding: "4px 8px",
-                              borderColor: "black",
-                              color: "black",
-                            }}
-                        >
-                          Spesial Price
-                        </Button>
+                        <span className="inline-block text-xs px-1.5 py-1 rounded-full border border-gray-700 mb-1 uppercase text-gray-700">
+                          Special Price
+                        </span>
                         <Typography className="font-bold text-black text-xs mt-2">CISCO CERT REFURB 14X10GBE LAN WANPHY INTERFACE MOD</Typography>
                         <Typography className="text-black text-xs ">
                           Cisco CRS-3 1400tt 1 OGbE LAN/WAN-PHY Interface Module - For

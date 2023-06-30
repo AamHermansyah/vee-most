@@ -16,7 +16,7 @@ const Shipping = () => {
 
   return (
     <>
-      <Header isNavFooterShow={true} />
+      <Header isNavFooterHidden={true} />
       <div className="min-h-screen z-10 mt-6">
         <div className="w-full bg-white sm:px-10 max-w-[1000px]">
           <div className="sm:mt-16 md:mt-16 lg:mt-0 h-full gap-1 p-4">
