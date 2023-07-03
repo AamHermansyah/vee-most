@@ -7,8 +7,9 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Description from "./description";
 
-function Description() {
+function DescriptionPage() {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabClick = (tabNumber) => {
@@ -123,39 +124,9 @@ function Description() {
   return (
     <>
       <Header isNavFooterHidden={true} />
-      <main className="mt-6 px-4 sm:px-10">
-        <div className="bg-white">
-          <div className="h-[35px] mt-2">
-            <Stack spacing={2}>
-              <Breadcrumbs
-                separator={<NavigateNextIcon fontSize="small" />}
-                aria-label="breadcrumb"
-              >
-                {breadcrumbs}
-              </Breadcrumbs>
-            </Stack>
-
-            <div className="overflow-x-auto">
-              <div className="w-full flex mt-10 md:border-b-[3px] border-gray-300">
-                {['Description', 'Technical Specification', 'Manufacturer Information', 'Warranty & Additional Information'].map((title, index) => (
-                  <button
-                    key={index}
-                    className={`tab-button ${activeTab === index + 1 ? "text-blue-500" : "text-black"} relative px-4 font-bold border-b-[3px] md:border-b-0 border-gray-300`}
-                    onClick={() => handleTabClick(index + 1)}
-                  >
-                    {title}
-                    <span className={`${activeTab === index + 1 ? 'bg-blue-500' : ''} absolute left-0 -bottom-[3px] w-full h-[3px]`} />
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            <div className="p-2 mt-4">{renderTabContent()}</div>
-          </div>
-        </div>
-      </main>
+      <Description />
     </>
   );
 }
 
-export default Description;
+export default DescriptionPage;

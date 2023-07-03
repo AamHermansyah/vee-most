@@ -13,6 +13,8 @@ import printer from "../../../assets/printer.png";
 import mail from "../../../assets/mail.png";
 import blueMail from "../../../assets/mail-blue.png"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Description from "@/app/description/description";
+
 
 const Products = () => {
   const [number, setNumber] = React.useState(1);
@@ -151,6 +153,9 @@ const Products = () => {
           </div>
         </div>
       </main>
+      <div className="mt-[400px] md:mt-[410px] lg:-mt-[170px]">
+        <Description/>
+      </div>
     </>
   );
 };

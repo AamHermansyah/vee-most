@@ -1,11 +1,9 @@
 "use client";
 
 import HeroSlider from "@/components/pages/home/HeroSlider";
-import bgHero from "../assets/bg-hero.png";
-import bgHeroLeft from "../assets/bg-hero_left.png";
-import bgSection2 from "../assets/bg-section-2.png";
-import bgSection3 from "../assets/bg-section-3.jpg";
-import bgSection4 from "../assets/bg-section-4.png";
+import bgSection2 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (10).png";
+import bgSection3 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (11).png";
+import bgSection4 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (12).png";
 import React, { useEffect, useState } from "react";
 import SectionTypeOne from "@/components/SectionTypeOne";
 import SectionTypeTwo from "@/components/SectionTypeTwo";

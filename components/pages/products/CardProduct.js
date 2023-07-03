@@ -45,10 +45,7 @@ function CardProduct() {
           </div>
         </div>
         <div>
-          <div className="flex gap-1 items-center">
-            <Checkbox sx={{ margin: 0, padding: 0 }} /> <span className="whitespace-nowrap">Add to compare</span>
-          </div>
-          <h4 className="text-2xl lg:text-3xl font-bold mt-2">
+          <h4 className="text-2xl lg:text-3xl font-bold mt-8">
             $2,945.60
           </h4>
           <div className="text-sm lg:text-base uppercase mt-4">
