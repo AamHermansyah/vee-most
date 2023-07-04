@@ -59,8 +59,8 @@ function Checkout() {
                 <Typography className="font-bold text-gray-700 text-2xl">My Cart</Typography>
               </div>  
             </div>
-
-            <div className="max-w-[1000px] mx-auto relative overflow-x-auto">
+            <div className="flex justify-between">
+            <div className="max-w-[1000px] mx-auto relative overflow-x-auto basis-[70%]">
               <table className="min-w-[900px] w-full text-sm text-left text-gray-500">
                 <thead className="text-xs text-gray-700 uppercase">
                   <tr className="font-bold text-black text-md border-b-[4px] border-yellow-500">
@@ -143,24 +143,13 @@ function Checkout() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div className="max-w-[1000px] mx-auto flex flex-col gap-2 mt-2">
-              <div className="flex flex-col justify-start items-end">
-                <h2 className="font-bold">Summary: 1 Item</h2>
-                <p>Shipable product subtotal $15,966.90</p>
-                <p>Backordered product subtotal $15,966.90</p>
-              </div>
-              <div className="mt-2">
+              <div className="inset-0">
                 <div className="h-1 bg-yellow-400" />
               </div>
-              <div className="flex flex-col justify-start items-end">
-                <h2 className="font-bold">Total: 1 Item</h2>
-                <p>Shipable product subtotal $15,966.90</p>
-                <p>Backordered product subtotal $00,000.00</p>
-              </div>
-              <div className="flex flex-col justify-start items-end mr-10 mt-4">
-                <button className="text-lg bg-yellow-500 text-white rounded-full px-4 py-2 w-[250px]">Checkout</button>
-              </div>
+            </div>
+            <div className="basis-[30%] w-full h-full bg-red-700">
+                  
+            </div>
             </div>
           </div>
         </div>
