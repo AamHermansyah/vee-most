@@ -1,12 +1,12 @@
-import bg_1 from "../assets/bg_1.jpeg";
-import bg_5 from "../assets/bg_5.png";
-import bg_6 from "../assets/bg_6.png";
-import bg_7 from "../assets/bg_7.png";
-import bg_8 from "../assets/bg_8.png";
-import bg_9 from "../assets/bg_9.png";
-import bg_2 from "../assets/bg2.png";
-import bg_3 from "../assets/bg3.png";
-import bg_4 from "../assets/bg4.png";
+import bg_1 from "../assets/bgHome1.png";
+import bg_5 from "../assets/bgHome5.png";
+import bg_6 from "../assets/bgHome6.png";
+import bg_7 from "../assets/bgHome7.png";
+import bg_8 from "../assets/bgHome8.png";
+import bg_9 from "../assets/bgHome9.png";
+import bg_2 from "../assets/bgHome2.png";
+import bg_3 from "../assets/bgHome3.png";
+import bg_4 from "../assets/bgHome4.png";
 
 const appearance = [
   {

@@ -28,22 +28,24 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
   return (
     <section className="w-full min-h-screen flex items-center justify-center mt-2">
       <div className="w-full h-full px-14">
-        <div className="w-full h-[200px] flex items-center justify-center relative">
+        <div className="w-full h-[200px] flex items-center lg:justify-center relative">
           {isVisibleLogo && (
-            <Image src={logo} alt="Logo" className="w-full max-w-[300px]" />
+            <Image src={logo} alt="Logo" className="w-[50%] lg:w-[300px]" />
           )}
           <div className="absolute flex gap-4 justify-end items-center right-0">
             <ShoppingCartOutlined
               sx={{
+                fontSize: 40,
                 color: "#000000",
               }}
-              className="text-[30px] lg:text-[40px]"
+              className="text-[30px] lg:text-[40px] hover:text-[#D7AA12] cursor-pointer"
             />
             <PersonOutline
               sx={{
+                fontSize: 40,
                 color: "#000000",
               }}
-              className="text-[30px] lg:text-[40px]"
+              className="text-[30px] lg:text-[40px] hover:text-[#D7AA12] cursor-pointer"
             />
           </div>
         </div>

@@ -24,12 +24,14 @@ const SectionTypeOne = ({ title, desc, isVisibleLogo = false, bg }) => {
                 fontSize: 40,
                 color: "#ffffff",
               }}
+              className="hover:text-[#D7AA12] cursor-pointer"
             />
             <PersonOutline
               sx={{
                 fontSize: 40,
                 color: "#ffffff",
               }}
+              className="hover:text-[#D7AA12] cursor-pointer"
             />
           </div>
         </div>
@@ -47,7 +49,7 @@ const SectionTypeOne = ({ title, desc, isVisibleLogo = false, bg }) => {
         <Image
           src={Chat}
           alt="icon"
-          className="w-[50px] lg:w-[75px] absolute bottom-20 right-0"
+          className="w-[50px] lg:w-[75px] absolute bottom-20 right-0 cursor-pointer"
         />
       </div>
     </section>

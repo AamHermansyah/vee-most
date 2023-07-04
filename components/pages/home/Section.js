@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import QuickQuote from "./QuickQuote";
 import Image from "next/image";
 import icon from "../../../assets/icon_5.png";
-import bg2 from "../../../assets/bg2.jpeg";
-import bg3 from "../../../assets/bg_3.png";
-import bg4 from "../../../assets/bgs4.png";
-import bg5 from "../../../assets/bgs5.png";
-import bg6 from "../../../assets/bgs6.png";
+
 import bg7 from "../../../assets/bgs7.png";
 import bg1 from "../../../assets/bg1.png";
 import CardProduct from "./CardProduct";
+import dummyProducts from "./dummyProducts";
 
 const products = [
   {
@@ -39,6 +36,7 @@ const products = [
 ];
 
 const AllProductSection = () => {
+  const [type, setType] = useState("all-products");
   return (
     <section className="relative px-4 w-full py-10 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-10">
       <p className="text-[14px] lg:text-[20px] text-[#737373] font-[400]">
@@ -50,7 +48,16 @@ const AllProductSection = () => {
       </h1>
       <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-20 relative">
         {products.map((item) => (
-          <p key={item.id} className="text-[16px] font-[500]">
+          <p
+            key={item.id}
+            className={[
+              "text-[16px] font-[500] cursor-pointer",
+              type === item.title
+                ? "text-[#D7AA12] hover:text-black"
+                : "hover:text-[#D7AA12] text-black",
+            ].join(" ")}
+            onClick={() => setType(item.title)}
+          >
             {item.title}
           </p>
         ))}
@@ -60,43 +67,21 @@ const AllProductSection = () => {
           className="absolute left-0 -top-8 lg:top-0 lg:-left-10 w-[20px] lg:w-[30px]"
         />
       </div>
-      <QuickQuote title={"All Products"} />
-      <div className="grid lg:grid-cols-5 gap-4 sm:gap-8 grid-cols-2 md:grid-cols-4">
-        <CardProduct
-          data={{
-            name: "Power Edge",
-            image: bg2,
-            price: "$10",
-          }}
-        />
-        <CardProduct
-          data={{
-            name: "Router",
-            image: bg6,
-            price: "$10",
-          }}
-        />
-        <CardProduct
-          data={{
-            name: "Monitor",
-            image: bg3,
-            price: "$10",
-          }}
-        />
-        <CardProduct
-          data={{
-            name: "Phone",
-            image: bg4,
-            price: "$10",
-          }}
-        />
-        <CardProduct
-          data={{
-            name: "Switch",
-            image: bg5,
-            price: "$10",
-          }}
-        />
+      <QuickQuote
+        title={"All Products"}
+        onClick={() => setType("all-products")}
+      />
+      <div className="grid grid-cols-primary md:grid-cols-primary-mobile justify-center gap-4 w-[90%] mx-auto">
+        {type === "all-products"
+          ? dummyProducts.map((item) => (
+              <CardProduct key={item.id} data={item} />
+            ))
+          : dummyProducts.map(
+              (item) =>
+                item.type.includes(type) && (
+                  <CardProduct key={item.id} data={item} />
+                )
+            )}
       </div>
       <Image
         src={bg1}

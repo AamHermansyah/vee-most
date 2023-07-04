@@ -11,13 +11,13 @@ const SearchInput = ({ placeholder, height, width }) => {
         p: "4px 0px 4px 8px",
         display: "flex",
         alignItems: "center",
-        width: width,
+        // width: width,
         border: "2px solid #868686",
         borderRadius: "50px",
         height: height,
         position: "relative",
       }}
-      className="shadow-0"
+      className={[`shadow-0 w-[200px] lg:w-[${width}px]`].join(" ")}
     >
       <InputBase sx={{ ml: 1, flex: 1 }} placeholder={placeholder} />
       <IconButton
