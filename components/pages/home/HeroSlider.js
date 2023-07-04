@@ -8,7 +8,7 @@ const HeroSlider = ({ item }) => {
   return (
     <div
       className={[
-        "bg-no-repeat bg-cover w-full h-[600px] lg:h-[500px]",
+        "bg-no-repeat bg-cover w-full h-[70vh] sm:h-[75vh] md:h-[80vh]",
         item.isActive ? "z-10" : "hidden",
         item.position ? item.position : "bg-center",
       ].join(" ")}
@@ -33,7 +33,7 @@ const HeroSlider = ({ item }) => {
           ].join(" ")}
         >
           {item.imageUrl && (
-            <div className="w-[50%]">
+            <div className="w-[50%] lg:w-[80%]">
               <Image
                 src={item.imageUrl}
                 alt={item.title}
@@ -50,8 +50,11 @@ const HeroSlider = ({ item }) => {
         >
           <h1
             className={[
-              "text-4xl lg:text-6xl font-secondary font-bold text-center w-full lg:w-[75%] mx-auto",
+              "font-secondary font-bold text-center w-full lg:w-[90%] mx-auto",
               item.imageUrl ? "text-black" : "text-white",
+              item.isLeft
+                ? "text-4xl lg:text-6xl"
+                : "text-4xl md:text-6xl lg:text-7xl",
             ].join(" ")}
           >
             {item.title}

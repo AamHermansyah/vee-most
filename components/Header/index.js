@@ -9,14 +9,14 @@ import {
   PersonOutline,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import logo from "../../assets/logoheader.png";
+import logo from "../../assets/logoHeader.png";
 import QuickQuote from "../pages/home/QuickQuote";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import productsMenu from "./productsMenu";
-import bgHeroLeft from "assets/bg-hero_left.png";
-import bgHero from "assets/bg-hero.png";
+import bgHeroLeft from "assets/bgHeroLeft.png";
+import bgHero from "assets/bgHeroRight.png";
 
 const Header = ({ isNavFooterHidden }) => {
   const router = useRouter();
@@ -32,27 +32,29 @@ const Header = ({ isNavFooterHidden }) => {
   };
 
   return (
-    <header className="relative">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 h-[100vh] w-full">
-          <div
-            className={[
-              "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30",
-            ].join(" ")}
-            style={{
-              backgroundImage: `url(${bgHeroLeft.src})`,
-            }}
-          />
-          <div
-            className={[
-              "absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30",
-            ].join(" ")}
-            style={{
-              backgroundImage: `url(${bgHero.src})`,
-            }}
-          />
+    <header className="relative h-[30vh] sm:h-[25vh] md:h-[20vh]">
+      {window.location.pathname !== "/" && (
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 h-[100vh] w-full">
+            <div
+              className={[
+                "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-30",
+              ].join(" ")}
+              style={{
+                backgroundImage: `url(${bgHeroLeft.src})`,
+              }}
+            />
+            <div
+              className={[
+                "absolute w-full h-full bg-no-repeat top-0 right-[-400px] opacity-30",
+              ].join(" ")}
+              style={{
+                backgroundImage: `url(${bgHero.src})`,
+              }}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="relative pb-2 sm:pb-0">
         <div className="pt-2 px-4 sm:px-10">
@@ -96,10 +98,10 @@ const Header = ({ isNavFooterHidden }) => {
             </div>
             <div>
               <div className="flex md:justify-end w-full gap-4 mb-2">
-                <div className="flex gap-x-4 gap-y-2 flex-wrap md:flex-nowrap">
+                <div className="flex gap-x-4 gap-y-2 items-center flex-wrap md:flex-nowrap">
                   <SearchInput
                     placeholder={"I'm looking for..."}
-                    height={40}
+                    height={30}
                     width={300}
                   />
                   <QuickQuote title={"Quick Quote"} />
@@ -109,11 +111,13 @@ const Header = ({ isNavFooterHidden }) => {
                     sx={{
                       fontSize: 40,
                     }}
+                    className="hover:text-[#D7AA12] cursor-pointer"
                   />
                   <PersonOutline
                     sx={{
                       fontSize: 40,
                     }}
+                    className="hover:text-[#D7AA12] cursor-pointer"
                   />
                 </div>
               </div>
@@ -126,7 +130,7 @@ const Header = ({ isNavFooterHidden }) => {
                           <Popover.Button
                             className={`
                               ${open ? "text-[#D7AA12]" : "text-black"}
-                              group inline-flex items-center  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
+                              hover:text-[#D7AA12] group inline-flex items-center  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
                           >
                             <span>{item.title}</span>
                           </Popover.Button>
@@ -213,7 +217,11 @@ const Header = ({ isNavFooterHidden }) => {
                       )}
                     </Popover>
                   ) : (
-                    <Link href={item.link} key={item.id} className="whitespace-nowrap">
+                    <Link
+                      href={item.link}
+                      key={item.id}
+                      className="whitespace-nowrap hover:text-[#D7AA12]"
+                    >
                       {item.title}
                     </Link>
                   )

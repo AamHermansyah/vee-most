@@ -1,9 +1,11 @@
 "use client";
 
 import HeroSlider from "@/components/pages/home/HeroSlider";
-import bgSection2 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (10).png";
-import bgSection3 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (11).png";
-import bgSection4 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (12).png";
+import bgHero from "../assets/bgHeroRight.png";
+import bgHeroLeft from "../assets/bgHeroLeft.png";
+import bgSection2 from "../assets/bgSection2.png";
+import bgSection3 from "../assets/bgSection3.png";
+import bgSection4 from "../assets/bgSection4.png";
 import React, { useEffect, useState } from "react";
 import SectionTypeOne from "@/components/SectionTypeOne";
 import SectionTypeTwo from "@/components/SectionTypeTwo";
@@ -20,27 +22,60 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden pb-10">
-      <Header />
-
-      <div className="relative">
-        {imageToDisplay.map((item) => (
-          <HeroSlider key={item.id} item={item} />
-        ))}
-
-        <div className="absolute left-4 sm:left-16 bottom-8 w-full flex items-center justify-start gap-4 z-30">
+    <div className="overflow-x-hidden pb-10 relative">
+      {window.location.pathname === "/" && (
+        <div className="relative h-screen">
           {imageToDisplay.map((item) => (
-            <Dot
-              key={item.id}
-              item={item}
-              setImageToDisplay={setImageToDisplay}
-              imageToDisplay={imageToDisplay}
-            />
+            <React.Fragment key={item.id}>
+              {item.isLeft && item.isActive && (
+                <div
+                  key={item.id}
+                  className={[
+                    "absolute w-full h-full bg-no-repeat top-0 left-0 opacity-70 bg-center bg-cover z-0",
+                    item.isActive ? "block" : "hidden",
+                  ].join(" ")}
+                  style={{
+                    backgroundImage: `url(${bgHeroLeft.src})`,
+                  }}
+                />
+              )}
+              {!item.isLeft && item.isActive && (
+                <div
+                  key={item.id}
+                  className={[
+                    "absolute w-full h-full bg-no-repeat top-0 right-0 opacity-70 bg-center bg-cover z-0",
+                    item.isActive ? "block" : "hidden",
+                  ].join(" ")}
+                  style={{
+                    backgroundImage: `url(${bgHero.src})`,
+                  }}
+                />
+              )}
+            </React.Fragment>
           ))}
+          <Header />
+
+          <div className="relative h-[80vh]">
+            {imageToDisplay.map((item) => (
+              <HeroSlider key={item.id} item={item} />
+            ))}
+
+            <div className="absolute left-4 sm:left-16 bottom-24 md:bottom-14 w-full flex items-center justify-start gap-4 z-30">
+              {imageToDisplay.map((item) => (
+                <Dot
+                  key={item.id}
+                  item={item}
+                  setImageToDisplay={setImageToDisplay}
+                  imageToDisplay={imageToDisplay}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Section 2 */}
+      <AllProductSection />
       <SectionTypeOne
         title="On-premise and Cloud Products & Services"
         desc={
@@ -49,7 +84,6 @@ export default function Home() {
         isVisibleLogo={true}
         bg={bgSection2}
       />
-      <AllProductSection />
       <SectionTypeOne
         title="Our Tech Team
         at your disposal"

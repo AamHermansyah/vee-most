@@ -1,13 +1,12 @@
-import bg_1 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (1).png";
-import bg_2 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (2).png";
-import bg_3 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (3).png";
-import bg_4 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (4).png";
-import bg_5 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (5).png";
-import bg_6 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (6).png";
-import bg_7 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (7).png";
-import bg_8 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (8).png";
-import bg_9 from "../assets/VeeMost Smart Store Images/VeeMost Smart Store (9).png";
-
+import bg_1 from "../assets/bgHome1.png";
+import bg_5 from "../assets/bgHome5.png";
+import bg_6 from "../assets/bgHome6.png";
+import bg_7 from "../assets/bgHome7.png";
+import bg_8 from "../assets/bgHome8.png";
+import bg_9 from "../assets/bgHome9.png";
+import bg_2 from "../assets/bgHome2.png";
+import bg_3 from "../assets/bgHome3.png";
+import bg_4 from "../assets/bgHome4.png";
 
 const appearance = [
   {
