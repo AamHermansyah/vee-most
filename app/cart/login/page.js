@@ -9,6 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Header from "@/components/Header";
+import PaymentPage from "@/components/payment/page";
+import ShippingPage from "@/components/shipping/page";
 
 const Login = () => {
   const [age, setAge] = React.useState('');
@@ -157,6 +159,8 @@ const Login = () => {
             </div>
           </div>
         </div>
+        <PaymentPage/>
+        <ShippingPage/>
       </div>  
     </>
   );

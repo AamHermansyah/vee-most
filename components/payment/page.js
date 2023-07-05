@@ -6,12 +6,11 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PayPalPayment from '@/components/PayPalCheckout';
-import products from "../../../assets/white-product.png";
+import products from "../../assets/white-product.png";
 
 function PaymentPage() {
   return (
     <div>
-      <Header isNavFooterHidden={true} />
       <div className="py-10 px-4 lg:px-10">
         <div className="flex flex-col-reverse lg:flex-row gap-y-10">
           <div className="basis-[65%]">

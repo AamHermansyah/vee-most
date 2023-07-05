@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react";
-import profile from "../../../assets/profile.png"
+import profile from "../../assets/profile.png"
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -12,11 +12,10 @@ import Header from "@/components/Header";
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-const Shipping = () => {
+const ShippingPage = () => {
 
   return (
     <>
-      <Header isNavFooterHidden={true} />
       <div className="min-h-screen z-10 mt-6">
         <div className="w-full bg-white sm:px-10 max-w-[1000px]">
           <div className="sm:mt-16 md:mt-16 lg:mt-0 h-full gap-1 p-4">
@@ -105,4 +104,4 @@ const Shipping = () => {
   );
 };
 
-export default Shipping;
+export default ShippingPage;
