@@ -8,11 +8,17 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Header from "@/components/Header";
+import { TextField } from "@mui/material";
+import { useState } from "react";
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const ShippingPage = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
   return (
     <>
@@ -25,12 +31,25 @@ const ShippingPage = () => {
               </h1>
               <div className="flex items-center gap-2">
                 <img src={profile.src} alt="profile" className="max-w-[25px] max-h-[25px]" />
-                <button className="w-[75px] h-[25px] bg-yellow-500 rounded-full">
+                <button onClick={handleLogin} className="w-[75px] h-[25px] bg-yellow-500 rounded-full">
                   <h1 className="font-bold text-md text-white">
                     Login
                   </h1>
                 </button>
               </div>
+                {isLoggedIn && (
+                  <div className="m-2">
+                    {/* form input */}
+                    <div className="mb-2 ml-4 w-1/2">
+                      <h3 className="font-300">Username</h3>
+                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </div>
+                    <div className="ml-4 w-1/2">
+                      <h3 className="font-300">Password</h3>
+                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </div>
+                  </div>
+                )}
               <div className="w-full h-auto flex flex-col pb-2 sm:pb-4 mt-8 border-b-2 border-gray-700">
                 <div className="flex items-center justify-between">
                   <h1 className="font-bold text-lg sm:text-xl sm:ml-4">

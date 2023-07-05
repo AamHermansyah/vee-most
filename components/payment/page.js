@@ -113,8 +113,9 @@ function PaymentPage() {
                     placeholder="Enter your comment..."
                     defaultValue=""
                   />
-
-                  <PayPalPayment />
+                  <div className="w-1/2 mx-auto">
+                    <PayPalPayment />
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,7 +123,7 @@ function PaymentPage() {
           <div className="basis-[35%]">
             <div className="bg-gray-200 py-6 px-4 lg:mt-20 rounded">
               <h2 className="text-2xl">Order Summary</h2>
-              <div className="border bg-yellow-50 p-2 rounded mt-2">
+              <div className="border bg-gray-100 p-2 rounded mt-2">
                 <div className="mb-3 w-full flex justify-between">
                   <span>Cart Subtotal</span>
                   <span>US$77,210.00</span>
@@ -139,9 +140,9 @@ function PaymentPage() {
                   <p className="text-xs">Tabel Rate - FedEx Priority</p>
                 </div>
                 <div className="border-t py-4">
-                  <div className="flex items-center justify-between font-bold text-lg">
-                    <h3>Order Total</h3>
-                    <span className="text-red-500">US$78,164.00</span>
+                  <div className="flex items-center justify-between ">
+                    <h3 className="font-bold text-lg">Order Total</h3>
+                    <span className="text-red-500 font-semibold text-base">US$78,164.00</span>
                   </div>
                 </div>
               </div>

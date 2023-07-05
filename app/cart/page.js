@@ -33,12 +33,12 @@ function Checkout() {
       setNumber((prevState) => prevState + value);
   }
   const breadcrumbs = [
-    <Typography key="1" className="font-bold text-yellow-600">
+    <h1 key="1" className="font-bold text-yellow-600">
       Home
-    </Typography>,
-    <Typography key="2" color="text.primary" className="font-bold">
+    </h1>,
+    <h1 key="2" color="text.primary" className="font-bold">
       Cart
-    </Typography>,
+    </h1>,
   ];
 
   return (
@@ -57,7 +57,7 @@ function Checkout() {
               </div>
               
               <div className="flex gap-2 mt-4">
-                <Typography className="font-bold text-gray-700 text-2xl">My Cart</Typography>
+                <h1 className="font-bold text-gray-700 text-2xl">My Cart</h1>
               </div>  
             </div>
             <div className="flex justify-between sm:flex-col md:flex-col lg:flex-row">
