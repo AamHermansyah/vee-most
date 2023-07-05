@@ -4,7 +4,6 @@ import HeroSlider from "@/components/pages/home/HeroSlider";
 import bgHero from "../assets/bgHeroRight.png";
 import bgHeroLeft from "../assets/bgHeroLeft.png";
 import bgSection2 from "../assets/bgSection2.png";
-import bgSection3 from "../assets/bgSection3.png";
 import bgSection4 from "../assets/bgSection4.png";
 import React, { useEffect, useState } from "react";
 import SectionTypeOne from "@/components/SectionTypeOne";
@@ -13,6 +12,7 @@ import appearance from "./appearance";
 import Dot from "@/components/pages/home/Dot";
 import AllProductSection from "@/components/pages/home/Section";
 import Header from "@/components/Header";
+import Sliders from "@/components/Slider";
 
 export default function Home() {
   const [imageToDisplay, setImageToDisplay] = useState([]);
@@ -84,14 +84,7 @@ export default function Home() {
         isVisibleLogo={true}
         bg={bgSection2}
       />
-      <SectionTypeOne
-        title="Our Tech Team
-        at your disposal"
-        desc={
-          "Tailored solutions for your unique needs - Let us help you find the IT products & services  that work best for you"
-        }
-        bg={bgSection3}
-      />
+      <Sliders />
       <SectionTypeOne
         title="Our tech team at your disposal"
         desc={

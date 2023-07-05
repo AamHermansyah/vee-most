@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import QuickQuote from "./QuickQuote";
 import Image from "next/image";
 import icon from "../../../assets/icon_5.png";
-
 import bg7 from "../../../assets/bgs7.png";
 import bg1 from "../../../assets/bg1.png";
 import CardProduct from "./CardProduct";
