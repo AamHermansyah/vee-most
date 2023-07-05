@@ -3,11 +3,9 @@
 import * as React from "react";
 import { useState } from "react";
 import Header from "@/components/Header";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Description from "./description";
+import Footer from "@/components/Footer";
 
 function DescriptionPage() {
   const [activeTab, setActiveTab] = useState(1);
@@ -125,6 +123,7 @@ function DescriptionPage() {
     <>
       <Header isNavFooterHidden={true} />
       <Description />
+      <Footer/>
     </>
   );
 }

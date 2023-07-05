@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import ShippingPage from '@/components/shipping/page'
 import React from 'react'
@@ -7,6 +8,7 @@ const CheckoutPage = () => {
     <>
       <Header isNavFooterHidden={true} />
       <ShippingPage/>
+      <Footer/>
     </>
   )
 }

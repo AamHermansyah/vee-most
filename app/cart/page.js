@@ -17,6 +17,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import PayPalPayment from '@/components/PayPalCheckout';
 import { Button } from "@mui/material";
+import Footer from "@/components/Footer";
 
 
 function Checkout() {
@@ -347,6 +348,7 @@ function Checkout() {
           </div>
         </div>
       </main>
+      <Footer/>
     </>
   );
 }

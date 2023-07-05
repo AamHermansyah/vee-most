@@ -11,6 +11,7 @@ import Select from '@mui/material/Select';
 import Header from "@/components/Header";
 import PaymentPage from "@/components/payment/page";
 import ShippingPage from "@/components/shipping/page";
+import Footer from "@/components/Footer";
 
 const Login = () => {
   const [age, setAge] = React.useState('');
@@ -161,6 +162,7 @@ const Login = () => {
         </div>
         <PaymentPage/>
         <ShippingPage/>
+        <Footer/>
       </div>  
     </>
   );

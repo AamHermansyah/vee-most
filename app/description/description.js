@@ -7,6 +7,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Footer from "@/components/Footer";
 
 const Description = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -152,6 +153,7 @@ const Description = () => {
           </div>
         </div>
       </main>
+      <Footer/>
     </>
   )
 }
