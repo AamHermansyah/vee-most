@@ -47,7 +47,7 @@ function Checkout() {
       <main className="min-h-screen mt-6">
         <div className="bg-white">
           <div className="py-10 px-4 sm:px-10">
-            <div className="max-w-[1000px] mx-auto">
+            <div className="max-w-[1000px] ml-6 border-2">
               <div className="flex justify-between items-center">
                 <Stack spacing={2}>
                   <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
