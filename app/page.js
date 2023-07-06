@@ -15,7 +15,10 @@ import AllProductSection from "@/components/pages/home/Section";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter()
   const [imageToDisplay, setImageToDisplay] = useState([]);
 
   useEffect(() => {
@@ -25,7 +28,7 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden pb-10 relative">
-        {window.location.pathname === "/" && (
+        {router.pathname !== "/" && (
           <div className="relative h-screen">
             {imageToDisplay.map((item) => (
               <React.Fragment key={item.id}>

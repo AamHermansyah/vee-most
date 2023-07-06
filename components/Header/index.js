@@ -33,7 +33,7 @@ const Header = ({ isNavFooterHidden }) => {
 
   return (
     <header className="relative h-[30vh] sm:h-[25vh] md:h-[20vh]">
-      {window.location.pathname !== "/" && (
+      {router.pathname !== "/" && (
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 h-[100vh] w-full">
             <div
