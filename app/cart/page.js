@@ -48,7 +48,7 @@ function Checkout() {
       <main className="min-h-screen mt-6">
         <div className="bg-white">
           <div className="py-10 px-4 sm:px-10">
-            <div className="max-w-[1000px] ml-6 border-2">
+            <div className="max-w-[1000px] ml-6">
               <div className="flex justify-between items-center">
                 <Stack spacing={2}>
                   <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
@@ -97,12 +97,12 @@ function Checkout() {
                         <span className="inline-block text-xs px-1.5 py-1 rounded-full border border-gray-700 mb-1 uppercase text-gray-700">
                           Special Price
                         </span>
-                        <Typography className="font-bold text-black text-xs mt-2">CISCO CERT REFURB 14X10GBE LAN WANPHY INTERFACE MOD</Typography>
-                        <Typography className="text-black text-xs ">
-                          Cisco CRS-3 1400tt 1 OGbE LAN/WAN-PHY Interface Module - For
+                        <h2 className="font-semibold text-black text-xs mt-2 mb-1">CISCO CERT REFURB 14X10GBE LAN WANPHY INTERFACE MOD</h2>
+                        <p className="text-black text-xs ">
+                          Cisco CRS-3 14-port 10GbE LAN/WAN-PHY Interface Module - For
                           Data Networking, Optical Network - 14 x Expansion Slots - XFP -
                           Hot-swappable
-                        </Typography>
+                        </p>
                         <div className="flex items-center gap-2 mr-8 mt-2">
                           <Typography className="py-1 px-2 rounded-full bg-green-100 font-bold text-xs text-green-800">
                             Direct Ship
@@ -113,7 +113,7 @@ function Checkout() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4">$3,319.28</td>
+                    <td className="px-6 py-4 text-black font-bold">$3,319.28</td>
                     <td className="px-6 py-4">
                       <div className="w-max flex border-2 rounded-md border-gray-400">
                         <button
@@ -139,7 +139,7 @@ function Checkout() {
                           <img src={save.src} alt="Save" className="mr-2 w-[25px] h-[25px]" />
                           <img src={trash.src} alt="Trash" className="mr-2 w-[25px] h-[25px]" />
                         </div>
-                        <div className="text-md font-bold mt-4">$3,319.28</div>
+                        <div className="text-md text-black font-bold mt-4">$3,319.28</div>
                       </div>
                     </td>
                   </tr>

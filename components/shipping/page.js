@@ -31,7 +31,7 @@ const ShippingPage = () => {
               </h1>
               <div className="flex items-center gap-2">
                 <img src={profile.src} alt="profile" className="max-w-[25px] max-h-[25px]" />
-                <button onClick={handleLogin} className="w-[75px] h-[25px] bg-yellow-500 rounded-full">
+                <button onClick={handleLogin} className="w-[75px] h-[25px] bg-yellow-400 rounded-full">
                   <h1 className="font-bold text-md text-white">
                     Login
                   </h1>
