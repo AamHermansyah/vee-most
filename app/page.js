@@ -15,6 +15,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
 import Sliders from "@/components/Slider";
+import bgSection3 from "../assets/bgSection3.png"
 
 export default function Home() {
   const router = useRouter()
@@ -88,14 +89,7 @@ export default function Home() {
           isVisibleLogo={true}
           bg={bgSection2}
         />
-        <SectionTypeOne
-          title="Our Tech Team
-          at your disposal"
-          desc={
-            "Tailored solutions for your unique needs - Let us help you find the IT products & services  that work best for you"
-          }
-          bg={bgSection3}
-        />
+        <Sliders />
         <SectionTypeOne
           title="Our tech team at your disposal"
           desc={
