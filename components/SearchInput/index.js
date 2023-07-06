@@ -13,10 +13,12 @@ const SearchInput = ({ placeholder, height, width }) => {
         alignItems: "center",
         border: "2px solid #868686",
         borderRadius: "50px",
+        width: '100%',
+        maxWidth: width,
         height: height,
         position: "relative",
       }}
-      className={[`shadow-0 w-[200px] lg:w-[${width}px]`].join(" ")}
+      className="shadow-0"
     >
       <input
         type="text"

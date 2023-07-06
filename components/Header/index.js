@@ -17,6 +17,7 @@ import { Popover, Transition } from "@headlessui/react";
 import productsMenu from "./productsMenu";
 import bgHeroLeft from "assets/bgHeroLeft.png";
 import bgHero from "assets/bgHeroRight.png";
+import TocIcon from '@mui/icons-material/Toc';
 
 const Header = ({ isNavFooterHidden }) => {
   const router = useRouter();
@@ -57,7 +58,7 @@ const Header = ({ isNavFooterHidden }) => {
       )}
 
       <div className="relative pb-2 sm:pb-0">
-        <div className="pt-2 px-4 sm:px-10">
+        <div className="pt-2 px-4 lg:px-10">
           {!isNavFooterHidden && (
             <div className="text-xs sm:text-base flex justify-end w-full gap-4">
               {menu1.map((item) => (
@@ -76,9 +77,9 @@ const Header = ({ isNavFooterHidden }) => {
             </div>
           )}
           <div className="block md:flex justify-between items-center">
-            <div className="w-full md:block flex items-center justify-between gap-4">
+            <div className="basis-[45%] lg:basis-[40%] w-full md:block flex items-center justify-between gap-4 max-h-[120px]">
               <Image
-                className="w-[150px] md:w-[225px] aspect-video cursor-pointer object-contain"
+                className="relative lg:-top-8 w-[150px] md:w-[225px] lg:w-[300px] aspect-video cursor-pointer object-contain"
                 src={logo}
                 alt="logo"
                 onClick={() => router.push("/")}
@@ -96,32 +97,32 @@ const Header = ({ isNavFooterHidden }) => {
                 />
               </div>
             </div>
-            <div>
+            <div className="basis-[55%] lg:basis-[60%]">
               <div className="flex md:justify-end w-full gap-4 mb-2">
-                <div className="flex gap-x-4 gap-y-2 items-center flex-wrap md:flex-nowrap">
+                <div className="w-full flex justify-end gap-x-4 gap-y-2 items-center">
                   <SearchInput
                     placeholder={"I'm looking for..."}
                     height={30}
-                    width={300}
+                    width={400}
                   />
                   <QuickQuote title={"Quick Quote"} />
-                </div>
-                <div className="hidden md:flex gap-4">
-                  <ShoppingCartOutlined
-                    sx={{
-                      fontSize: 40,
-                    }}
-                    className="hover:text-[#D7AA12] cursor-pointer"
-                  />
-                  <PersonOutline
-                    sx={{
-                      fontSize: 40,
-                    }}
-                    className="hover:text-[#D7AA12] cursor-pointer"
-                  />
+                  <div className="hidden md:flex gap-4">
+                    <ShoppingCartOutlined
+                      sx={{
+                        fontSize: 40,
+                      }}
+                      className="hover:text-[#D7AA12] cursor-pointer"
+                    />
+                    <PersonOutline
+                      sx={{
+                        fontSize: 40,
+                      }}
+                      className="hover:text-[#D7AA12] cursor-pointer"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2 md:pb-0">
+              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end items-center w-full gap-x-4 md:gap-x-8 pb-2 md:pb-0">
                 {menu2.map((item) =>
                   item.title === "Products" ? (
                     <Popover className="relative" key={item.id}>
@@ -130,8 +131,15 @@ const Header = ({ isNavFooterHidden }) => {
                           <Popover.Button
                             className={`
                               ${open ? "text-[#D7AA12]" : "text-black"}
-                              hover:text-[#D7AA12] group inline-flex items-center  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
+                              hover:text-[#aa8c28] text-sm sm:text-base font-bold group inline-flex items-end gap-2  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
                           >
+                            <TocIcon
+                              sx={{
+                                fontSize: 35,
+                                position: 'relative',
+                                top: 5,
+                              }}
+                            />
                             <span>{item.title}</span>
                           </Popover.Button>
                           <Transition
@@ -218,7 +226,7 @@ const Header = ({ isNavFooterHidden }) => {
                     <Link
                       href={item.link}
                       key={item.id}
-                      className="whitespace-nowrap hover:text-[#D7AA12]"
+                      className="whitespace-nowrap hover:text-[#D7AA12] text-sm sm:text-base font-bold"
                     >
                       {item.title}
                     </Link>
