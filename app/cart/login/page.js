@@ -11,6 +11,7 @@ import Select from '@mui/material/Select';
 import Header from "@/components/Header";
 import PaymentPage from "@/components/payment/page";
 import ShippingPage from "@/components/shipping/page";
+import { useState } from "react";
 import Footer from "@/components/Footer";
 
 const Login = () => {
@@ -18,6 +19,12 @@ const Login = () => {
 
   const handleChange = (event) => {
     setAge(event.target.value);
+  };
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
   };
 
   return (
@@ -31,12 +38,25 @@ const Login = () => {
             </h1>
             <div className="flex items-center gap-2">
               <img src={profile.src} alt="profile" className="max-w-[25px] max-h-[25px]"/>
-              <button className="w-[75px] h-[25px] bg-yellow-500 rounded-full">
+              <button className="w-[75px] h-[25px] bg-yellow-400 rounded-full " onClick={handleLogin}>
                 <h1 className="font-bold text-md text-white ">
                   Login
                 </h1>
               </button>
             </div>
+            {isLoggedIn && (
+                  <div className="m-2">
+                    {/* form input */}
+                    <div className="mb-2 lg:w-1/4 sm:w-1/2 md:w-1/2">
+                      <h3 className="font-300">Username</h3>
+                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </div>
+                    <div className="lg:w-1/4 sm:w-1/2 md:w-1/2">
+                      <h3 className="font-300">Password</h3>
+                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </div>
+                  </div>
+                )}
             <div className="flex flex-col-reverse sm:grid grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="lg:col-span-2">
                 <h2 className="font-bold my-4">
@@ -124,7 +144,7 @@ const Login = () => {
                     <TextField className="w-full" id="outlined-basic"  variant="outlined" />
                   </div>
                   <div className="col-span-2">
-                    <button className="bg-yellow-500 rounded py-2 px-4 mt-4">
+                    <button className="bg-yellow-400 rounded py-2 px-4 mt-4 text-white">
                       Checkout
                     </button>
                   </div>
