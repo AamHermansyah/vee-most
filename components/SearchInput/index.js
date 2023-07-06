@@ -8,10 +8,9 @@ const SearchInput = ({ placeholder, height, width }) => {
     <Paper
       component="form"
       sx={{
-        p: "4px 0px 4px 8px",
+        p: "4px 0px 4px 0px",
         display: "flex",
         alignItems: "center",
-        // width: width,
         border: "2px solid #868686",
         borderRadius: "50px",
         height: height,
@@ -19,7 +18,12 @@ const SearchInput = ({ placeholder, height, width }) => {
       }}
       className={[`shadow-0 w-[200px] lg:w-[${width}px]`].join(" ")}
     >
-      <InputBase sx={{ ml: 1, flex: 1 }} placeholder={placeholder} />
+      <input
+        type="text"
+        name="search"
+        placeholder={placeholder}
+        className="w-full h-full bg-transparent border-0 outline-0 focus:outline-0 focus:ring-0"
+      />
       <IconButton
         type="div"
         sx={{

@@ -32,7 +32,7 @@ const Header = ({ isNavFooterHidden }) => {
   };
 
   return (
-    <header className="relative h-[30vh] sm:h-[25vh] md:h-[20vh]">
+    <header className="relative">
       {router.pathname !== "/" && (
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 h-[100vh] w-full">
@@ -121,7 +121,7 @@ const Header = ({ isNavFooterHidden }) => {
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2 sm:pb-0">
+              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-end w-full gap-x-4 md:gap-x-8 pb-2 md:pb-0">
                 {menu2.map((item) =>
                   item.title === "Products" ? (
                     <Popover className="relative" key={item.id}>
@@ -166,19 +166,17 @@ const Header = ({ isNavFooterHidden }) => {
                                             {item.name}
                                           </p>
                                           <div
-                                            className={`${
-                                              item.id === activeId
-                                                ? "rotate-90"
-                                                : "-rotate-90"
-                                            } md:rotate-0`}
+                                            className={`${item.id === activeId
+                                              ? "rotate-90"
+                                              : "-rotate-90"
+                                              } md:rotate-0`}
                                           >
                                             <ChevronRight
                                               sx={{
-                                                color: `${
-                                                  item.id === activeId
-                                                    ? "#D7AA12"
-                                                    : "inherit"
-                                                }`,
+                                                color: `${item.id === activeId
+                                                  ? "#D7AA12"
+                                                  : "inherit"
+                                                  }`,
                                               }}
                                             />
                                           </div>
