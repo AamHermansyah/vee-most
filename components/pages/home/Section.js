@@ -70,17 +70,17 @@ const AllProductSection = () => {
         title={"All Products"}
         onClick={() => setType("all-products")}
       />
-      <div className="grid grid-cols-primary md:grid-cols-primary-mobile justify-center gap-4 w-[90%] mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-4 sm:px-4 lg:px-10">
         {type === "all-products"
           ? dummyProducts.map((item) => (
-              <CardProduct key={item.id} data={item} />
-            ))
+            <CardProduct key={item.id} data={item} />
+          ))
           : dummyProducts.map(
-              (item) =>
-                item.type.includes(type) && (
-                  <CardProduct key={item.id} data={item} />
-                )
-            )}
+            (item) =>
+              item.type.includes(type) && (
+                <CardProduct key={item.id} data={item} />
+              )
+          )}
       </div>
       <Image
         src={bg1}
