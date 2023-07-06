@@ -1,8 +1,8 @@
 import bg2 from "../../../assets/bg2.jpeg";
-import bg3 from "../../../assets/bg_3.png";
-import bg4 from "../../../assets/bgs4.png";
-import bg5 from "../../../assets/bgs5.png";
-import bg6 from "../../../assets/bgs6.png";
+import bg3 from "../../../assets/bgHome8.png";
+import bg4 from "../../../assets/bgHome9.png";
+import bg5 from "../../../assets/bgHome6.png";
+import bg6 from "../../../assets/bgHome7.png";
 
 const dummyProducts = [
   {

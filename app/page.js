@@ -4,7 +4,6 @@ import HeroSlider from "@/components/pages/home/HeroSlider";
 import bgHero from "../assets/bgHeroRight.png";
 import bgHeroLeft from "../assets/bgHeroLeft.png";
 import bgSection2 from "../assets/bgSection2.png";
-import bgSection3 from "../assets/bgSection3.png";
 import bgSection4 from "../assets/bgSection4.png";
 import React, { useEffect, useState } from "react";
 import SectionTypeOne from "@/components/SectionTypeOne";
@@ -14,8 +13,8 @@ import Dot from "@/components/pages/home/Dot";
 import AllProductSection from "@/components/pages/home/Section";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 import { useRouter } from "next/navigation";
+import Sliders from "@/components/Slider";
 
 export default function Home() {
   const router = useRouter()
