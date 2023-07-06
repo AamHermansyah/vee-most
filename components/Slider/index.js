@@ -5,6 +5,7 @@ import Carousel from "react-material-ui-carousel";
 import dummyProducts from "../pages/home/dummyProducts";
 import Image from "next/image";
 import "./style.css";
+import bg_slider from "../../assets/slider_background.png"
 
 function Item({ item }) {
   return (
@@ -20,7 +21,9 @@ function Item({ item }) {
 
 const Sliders = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-center">
+    <div className="h-screen w-full flex items-center justify-center"  
+        style={{ backgroundImage: `url(${bg_slider.src})` }}
+    >
       <Carousel
         className="h-full w-full flex items-center justify-center"
         NextIcon={<ChevronRight />}
