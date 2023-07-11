@@ -113,7 +113,7 @@ function PaymentPage() {
                     placeholder="Enter your comment..."
                     defaultValue=""
                   />
-                  <div className="w-1/2 mx-auto">
+                  <div className="lg:w-1/2 mx-auto sm:w-full">
                     <PayPalPayment />
                   </div>
                 </div>
