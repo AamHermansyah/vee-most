@@ -27,7 +27,7 @@ function CardProduct() {
               Juniper Configuratio Juniper MX480 Router Chassis - 8 - Rack - Mountable - 1 Year
             </p>
             <div className="text-sm">
-              <span className="uppercase">
+              <span className="uppercase mr-2">
                 <b>VPN: </b> MX480Base3-Ac
               </span>
               <span className="uppercase">
