@@ -61,7 +61,7 @@ function Checkout() {
                 <h1 className="font-bold text-gray-700 text-2xl">My Cart</h1>
               </div>
             </div>
-            <div className="flex justify-between sm:flex-col md:flex-col lg:flex-row">
+            <div className="flex justify-between flex-col lg:flex-row">
               <div className="max-w-[1000px] mx-auto relative overflow-x-auto basis-[70%]">
                 <table className="min-w-[900px] w-full text-sm text-left text-gray-500">
                   <thead className="text-xs text-gray-700 uppercase">
