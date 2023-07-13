@@ -9,7 +9,7 @@ import {
   PersonOutline,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import logo from "../../assets/logoheader.png";
+import logo from "@/assets/logoheader.png";
 import QuickQuote from "../pages/home/QuickQuote";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

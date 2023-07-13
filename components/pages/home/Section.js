@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import QuickQuote from "./QuickQuote";
 import Image from "next/image";
-import icon from "../../../assets/icon_5.png";
-import bg7 from "../../../assets/bgs7.png";
-import bg1 from "../../../assets/bg1.png";
+import icon from "@/assets//icon_5.png";
+import bg7 from "@/assets//bgs7.png";
+import bg1 from "@/assets//bg1.png";
 import CardProduct from "./CardProduct";
 import dummyProducts from "./dummyProducts";
 
@@ -37,7 +37,7 @@ const products = [
 const AllProductSection = () => {
   const [type, setType] = useState("all-products");
   return (
-    <section className="relative px-4 w-full py-10 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-10">
+    <section className="relative px-4 w-full py-10 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-10 overflow-hidden">
       <p className="text-[14px] lg:text-[20px] text-[#737373] font-[400]">
         choose wisely, succeed effortlessly
       </p>

@@ -1,8 +1,8 @@
-import bg2 from "../../../assets/bg2-removebg-preview.png";
-import bg3 from "../../../assets/bgHome8-removebg-preview.png";
-import bg4 from "../../../assets/bgHome9-removebg-preview.png";
-import bg5 from "../../../assets/bgHome6-removebg-preview.png";
-import bg6 from "../../../assets/bgHome7-removebg-preview.png";
+import bg2 from "@/assets//bg2-removebg-preview.png";
+import bg3 from "@/assets//bgHome8-removebg-preview.png";
+import bg4 from "@/assets//bgHome9-removebg-preview.png";
+import bg5 from "@/assets//bgHome6-removebg-preview.png";
+import bg6 from "@/assets//bgHome7-removebg-preview.png";
 
 const dummyProducts = [
   {

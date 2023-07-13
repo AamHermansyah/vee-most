@@ -5,11 +5,11 @@ import Carousel from "react-material-ui-carousel";
 import dummyProducts from "../pages/home/dummyProducts";
 import Image from "next/image";
 import "./style.css";
-import bg_slider from "../../assets/slider_background.png";
+import bg_slider from "@/assets/slider_background.png";
 
 function Item({ item }) {
   return (
-    <Paper className="h-full w-full flex items-center justify-center shadow-none">
+    <Paper className="max-h-[350px] h-full w-full flex items-center justify-center shadow-none">
       <Image
         src={item.image}
         alt={item.name}

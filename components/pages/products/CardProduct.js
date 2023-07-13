@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Image from 'next/image';
-import productPicture from "../../../assets/vee-store-product.png";
+import productPicture from "@/assets//vee-store-product.png";
 
 function CardProduct() {
   return (
