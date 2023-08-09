@@ -5,7 +5,6 @@ import bg_7 from "../assets/bgHome7.png";
 import bg_8 from "../assets/bgHome8.png";
 import bg_9 from "../assets/bgHome9.png";
 import bg_2 from "../assets/bgHome2.png";
-import bg_3 from "../assets/bgHome3.png";
 import bg_4 from "../assets/bgHome4.png";
 
 const appearance = [
@@ -23,15 +22,6 @@ const appearance = [
     isVisibleBackground: true,
     background: bg_2,
     title: "The smart store for digital transformation 2",
-    desc: "Transform your business with our products and services.",
-    position: "bg-top",
-  },
-  {
-    id: 3,
-    isActive: false,
-    isVisibleBackground: true,
-    background: bg_3,
-    title: "The smart store for digital transformation 3",
     desc: "Transform your business with our products and services.",
     position: "bg-top",
   },

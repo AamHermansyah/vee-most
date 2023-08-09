@@ -13,7 +13,7 @@ function Item({ item }) {
       <Image
         src={item.image}
         alt={item.name}
-        className="w-[50%] object-cover object-center"
+        className="w-full sm:w-[50%] h-[300px] object-contain object-center"
       />
     </Paper>
   );

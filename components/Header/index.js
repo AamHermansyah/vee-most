@@ -9,6 +9,8 @@ import {
   PersonOutline,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
+import {PiShoppingCart} from 'react-icons/pi'
+import {BsPerson} from 'react-icons/bs'
 import logo from "../../assets/logoHeader.png";
 import QuickQuote from "../pages/home/QuickQuote";
 import Link from "next/link";
@@ -65,7 +67,7 @@ const Header = ({ isNavFooterHidden }) => {
                 <div
                   key={item.id}
                   className={[
-                    "font-[600]",
+                    "font-medium",
                     item.id % 2 === 0
                       ? "border-x-2 border-black px-2"
                       : "border-x-0",
@@ -85,15 +87,11 @@ const Header = ({ isNavFooterHidden }) => {
                 onClick={() => router.push("/")}
               />
               <div className="flex md:hidden gap-4">
-                <ShoppingCartOutlined
-                  sx={{
-                    fontSize: 30,
-                  }}
+                <PiShoppingCart
+                  size={30}
                 />
-                <PersonOutline
-                  sx={{
-                    fontSize: 30,
-                  }}
+                <BsPerson
+                  size={30}
                 />
               </div>
             </div>
@@ -107,16 +105,12 @@ const Header = ({ isNavFooterHidden }) => {
                   />
                   <QuickQuote title={"Quick Quote"} />
                   <div className="hidden md:flex gap-4">
-                    <ShoppingCartOutlined
-                      sx={{
-                        fontSize: 40,
-                      }}
+                    <PiShoppingCart
+                      size={40}
                       className="hover:text-[#D7AA12] cursor-pointer"
                     />
-                    <PersonOutline
-                      sx={{
-                        fontSize: 40,
-                      }}
+                    <BsPerson
+                      size={40}
                       className="hover:text-[#D7AA12] cursor-pointer"
                     />
                   </div>
@@ -131,7 +125,7 @@ const Header = ({ isNavFooterHidden }) => {
                           <Popover.Button
                             className={`
                               ${open ? "text-[#D7AA12]" : "text-black"}
-                              hover:text-[#aa8c28] text-sm sm:text-base font-bold group inline-flex items-end gap-2  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
+                              hover:text-[#aa8c28] text-sm sm:text-base font-medium group inline-flex items-end gap-2  hover:text-opacity-100 focus:outline-none  focus-visible:ring-opacity-75`}
                           >
                             <TocIcon
                               sx={{
@@ -226,7 +220,7 @@ const Header = ({ isNavFooterHidden }) => {
                     <Link
                       href={item.link}
                       key={item.id}
-                      className="whitespace-nowrap hover:text-[#D7AA12] text-sm sm:text-base font-bold"
+                      className="whitespace-nowrap hover:text-[#D7AA12] text-sm sm:text-base font-medium"
                     >
                       {item.title}
                     </Link>

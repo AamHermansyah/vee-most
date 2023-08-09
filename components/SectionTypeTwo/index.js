@@ -53,7 +53,7 @@ const SectionTypeTwo = ({ isVisibleLogo = false, title, desc }) => {
           <h1 className="text-6xl font-secondary font-bold text-black text-center">
             {title}
           </h1>
-          <div className="w-full flex justify-around items-center flex-wrap gap-4 lg:gap-0">
+          <div className="w-full flex justify-evenly items-center flex-wrap gap-4 lg:gap-0">
             {image_content.map((item) => (
               <div
                 key={item.id}

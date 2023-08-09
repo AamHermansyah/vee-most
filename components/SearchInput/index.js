@@ -24,7 +24,7 @@ const SearchInput = ({ placeholder, height, width }) => {
         type="text"
         name="search"
         placeholder={placeholder}
-        className="w-full h-full bg-transparent border-0 outline-0 focus:outline-0 focus:ring-0"
+        className="placeholder:text-xs w-full h-full bg-transparent border-0 outline-0 focus:outline-0 focus:ring-0"
       />
       <IconButton
         type="div"
