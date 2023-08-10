@@ -11,7 +11,7 @@ import {
 } from "@mui/icons-material";
 import {PiShoppingCart} from 'react-icons/pi'
 import {BsPerson} from 'react-icons/bs'
-import logo from "../../assets/logoHeader.png";
+import logo from "../../assets/logoheader.png";
 import QuickQuote from "../pages/home/QuickQuote";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
