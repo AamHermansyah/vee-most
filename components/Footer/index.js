@@ -261,25 +261,20 @@ const Footer = () => {
                     </li>
 
                     <li>
-                    <a
-                        className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                        href="/"
-                    >
                         <span
                         className=" transition group- text-white hover:text-white/75"
                         >
                         Live Chat
                         </span>
 
-                        <span className="relative flex h-2 w-2">
+                        {/* <span className="relative flex h-2 w-2">
                         <span
                             className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"
                         ></span>
                         <span
                             className="relative inline-flex h-2 w-2 rounded-full bg-teal-500"
                         ></span>
-                        </span>
-                    </a>
+                        </span> */}
                     </li>
                 </ul>
                 </div>

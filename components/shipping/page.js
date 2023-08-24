@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react";
-import profile from "../../assets/profile.png"
+import profile from "@/assets/profile.png"
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -37,19 +37,19 @@ const ShippingPage = () => {
                   </h1>
                 </button>
               </div>
-                {isLoggedIn && (
-                  <div className="m-2">
-                    {/* form input */}
-                    <div className="mb-2 ml-4 w-1/2">
-                      <h3 className="font-300">Username</h3>
-                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
-                    </div>
-                    <div className="ml-4 w-1/2">
-                      <h3 className="font-300">Password</h3>
-                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
-                    </div>
+              {isLoggedIn && (
+                <div className="m-2">
+                  {/* form input */}
+                  <div className="mb-2 ml-4 w-1/2">
+                    <h3 className="font-300">Username</h3>
+                    <TextField className="w-full" id="outlined-basic" variant="outlined" />
                   </div>
-                )}
+                  <div className="ml-4 w-1/2">
+                    <h3 className="font-300">Password</h3>
+                    <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                  </div>
+                </div>
+              )}
               <div className="w-full h-auto flex flex-col pb-2 sm:pb-4 mt-8 border-b-2 border-gray-700">
                 <div className="flex items-center justify-between">
                   <h1 className="font-bold text-lg sm:text-xl sm:ml-4">

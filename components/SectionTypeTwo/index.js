@@ -1,9 +1,9 @@
 import { PersonOutline, ShoppingCartOutlined } from "@mui/icons-material";
 import Image from "next/image";
-import logo from "../../assets/VeeMost_Smart_Store.png";
-import icon_1 from "../../assets/icon_1.webp";
-import icon_2 from "../../assets/icon_2.webp";
-import icon_3 from "../../assets/icon_3.webp";
+import logo from "@/assets/VeeMost_Smart_Store.png";
+import icon_1 from "@/assets/icon_1.webp";
+import icon_2 from "@/assets/icon_2.webp";
+import icon_3 from "@/assets/icon_3.webp";
 import React from "react";
 
 const image_content = [

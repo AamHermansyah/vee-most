@@ -1,13 +1,8 @@
 "use client"
 
 import * as React from "react";
-import profile from "../../../assets/profile.png"
-import products from "../../../assets/white-product.png";
-import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import profile from "@/assets//profile.png"
+import products from "@/assets//white-product.png";
 import Header from "@/components/Header";
 import PaymentPage from "@/components/payment/page";
 import ShippingPage from "@/components/shipping/page";
@@ -15,12 +10,6 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 
 const Login = () => {
-  const [age, setAge] = React.useState('');
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
@@ -37,7 +26,7 @@ const Login = () => {
               Checkout
             </h1>
             <div className="flex items-center gap-2">
-              <img src={profile.src} alt="profile" className="max-w-[25px] max-h-[25px]"/>
+              <img src={profile.src} alt="profile" className="max-w-[25px] max-h-[25px]" />
               <button className="w-[75px] h-[25px] bg-yellow-400 rounded-full " onClick={handleLogin}>
                 <h1 className="font-bold text-md text-white ">
                   Login
@@ -45,103 +34,132 @@ const Login = () => {
               </button>
             </div>
             {isLoggedIn && (
-                  <div className="m-2">
-                    {/* form input */}
-                    <div className="mb-2 lg:w-1/4 sm:w-1/2 md:w-1/2">
-                      <h3 className="font-300">Username</h3>
-                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
-                    </div>
-                    <div className="lg:w-1/4 sm:w-1/2 md:w-1/2">
-                      <h3 className="font-300">Password</h3>
-                      <TextField className="w-full" id="outlined-basic" variant="outlined" />
-                    </div>
-                  </div>
-                )}
+              <div className="m-2">
+                {/* form input */}
+                <div className="mb-2 lg:w-1/4 sm:w-1/2 md:w-1/2">
+                  <label htmlFor="username" className="font-300">Username</label>
+                  <input
+                    name="username"
+                    placeholder="username"
+                    className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                  />
+                </div>
+                <div className="lg:w-1/4 sm:w-1/2 md:w-1/2">
+                  <label htmlFor="password" className="font-300">Password</label>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="********"
+                    className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                  />
+                </div>
+              </div>
+            )}
             <div className="flex flex-col-reverse sm:grid grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="lg:col-span-2">
                 <h2 className="font-bold my-4">
                   Shipping Address
                 </h2>
                 <div className="lg:grid grid-cols-2 gap-4">
-                  <div className="mb-2">
-                    <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="firstname" className="font-300">
                       First Name *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic"  placeholder="Ethan" variant="outlined" />
+                    </label>
+                    <input
+                      name="firstname"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="lastname" className="font-300">
                       Last Name *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic"  placeholder="Osuji" variant="outlined" />
+                    </label>
+                    <input
+                      name="lastname"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="address" className="font-300">
                       Street Address *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </label>
+                    <input
+                      name="address"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
-                      Country *
-                    </h3>
-                    <FormControl fullWidth className="w-full">
-                      <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                      <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={age}
-                        placeholderl="Country"
-                        onChange={handleChange}
-                      >
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                      </Select>
-                    </FormControl>
+                  <div className="mb-3">
+                    <label htmlFor="countries" className="font-300">
+                      Country
+                    </label>
+                    <select
+                      id="countries"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    >
+                      <option selected="">Choose a country</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="FR">France</option>
+                      <option value="DE">Germany</option>
+                    </select>
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
-                      State/Province*
-                    </h3>
-                    <FormControl fullWidth className="w-full">
-                      <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                      <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={age}
-                        placeholder="Please Select a region, state, or province"
-                        onChange={handleChange}
-                      >
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                      </Select>
-                    </FormControl>
+                  <div className="mb-3">
+                    <label htmlFor="countries" className="font-300">
+                      State/Province
+                    </label>
+                    <select
+                      id="countries"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    >
+                      <option selected="">Choose a state</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="FR">France</option>
+                      <option value="DE">Germany</option>
+                    </select>
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="city" className="font-300">
                       City *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic"   variant="outlined" />
+                    </label>
+                    <input
+                      name="city"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                  <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="zip" className="font-300">
                       Zip/Postal Code *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </label>
+                    <input
+                      name="zip"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
+                  <div className="mb-3">
+                    <label htmlFor="phone" className="font-300">
                       Phone Number *
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic" variant="outlined" />
+                    </label>
+                    <input
+                      name="phone"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
-                  <div className="mb-2">
-                    <h3 className="font-300">
-                      Company 
-                    </h3>
-                    <TextField className="w-full" id="outlined-basic"  variant="outlined" />
+                  <div className="mb-3">
+                    <label htmlFor="company" className="font-300">
+                      Company
+                    </label>
+                    <input
+                      name="company"
+                      placeholder="44167"
+                      className="border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mt-2"
+                    />
                   </div>
                   <div className="col-span-2">
                     <button className="bg-yellow-400 rounded py-2 px-4 mt-4 text-white">
@@ -168,11 +186,11 @@ const Login = () => {
                         Qty : 5
                       </p>
                       <p className="text-sm">
-                        View Details  
+                        View Details
                       </p>
                     </div>
                     <div className="text-sm font-400">
-                        US$77,210.00
+                      US$77,210.00
                     </div>
                   </div>
                 </div>
@@ -180,10 +198,8 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <PaymentPage/>
-        <ShippingPage/>
-        <Footer/>
-      </div>  
+        <Footer />
+      </div>
     </>
   );
 };

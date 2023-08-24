@@ -5,11 +5,11 @@ import Carousel from "react-material-ui-carousel";
 import dummyProducts from "../pages/home/dummyProducts";
 import Image from "next/image";
 import "./style.css";
-import bg_slider from "../../assets/slider_background.png";
+import bg_slider from "@/assets/slider_background.png";
 
 function Item({ item }) {
   return (
-    <Paper className="h-full w-full flex items-center justify-center">
+    <Paper className="max-h-[350px] h-full w-full flex items-center justify-center shadow-none">
       <Image
         src={item.image}
         alt={item.name}
@@ -29,7 +29,7 @@ const Sliders = () => {
       style={{ backgroundImage: `url(${bg_slider.src})` }}
     >
       <Carousel
-        className="relative h-full w-full flex items-center justify-center"
+        className="relative h-full w-full flex items-center justify-center shadow-none"
         NextIcon={<ChevronRight />}
         PrevIcon={<ChevronLeft />}
         indicators={true}
@@ -42,41 +42,41 @@ const Sliders = () => {
         }}
         indicatorContainerProps={{
           sx: {
-            position: 'absolute',
+            position: "absolute",
             bottom: 50,
             left: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '10px 10px'
-          }
+            display: "flex",
+            justifyContent: "center",
+            gap: "10px 10px",
+          },
         }}
         indicatorIconButtonProps={{
           sx: {
-            backgroundColor: '#e2e8f0 !important',
+            backgroundColor: "#e2e8f0 !important",
             borderRadius: 0,
             width: isSmScreen ? 30 : 60,
             height: 10,
-            '&:hover': {
-              backgroundColor: '#cbd5e1 !important',
+            "&:hover": {
+              backgroundColor: "#cbd5e1 !important",
             },
-            '& svg': {
-              display: 'none'
-            }
+            "& svg": {
+              display: "none",
+            },
           },
         }}
         activeIndicatorIconButtonProps={{
           sx: {
-            backgroundColor: '#D7AA12 !important',
+            backgroundColor: "#D7AA12 !important",
             borderRadius: 0,
             width: isSmScreen ? 30 : 60,
             height: 10,
-            '&:hover': {
-              backgroundColor: '#cbd5e1 !important',
+            "&:hover": {
+              backgroundColor: "#cbd5e1 !important",
             },
-            '& svg': {
-              display: 'none'
-            }
-          }
+            "& svg": {
+              display: "none",
+            },
+          },
         }}
       >
         {dummyProducts.map((item, i) => (

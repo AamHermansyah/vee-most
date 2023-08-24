@@ -1,18 +1,17 @@
 'use client';
 
-import Header from '@/components/Header';
 import CheckIcon from '@mui/icons-material/Check';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import PayPalPayment from '@/components/PayPalCheckout';
-import products from "../../assets/white-product.png";
+import products from "@/assets/white-product.png";
 
 function PaymentPage() {
   return (
     <div>
       <div className="py-10 px-4 lg:px-10">
-        <div className="flex flex-col-reverse lg:flex-row gap-y-10">
+        <div className="flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-x-4">
           <div className="basis-[65%]">
             <div className="flex justify-between flex-wrap gap-y-6 sm:gap-y-10">
               <h1 className="text-3xl font-bold">Checkout</h1>
@@ -99,7 +98,7 @@ function PaymentPage() {
                     <a href="#" className="text-xs pl-4 mt-2 text-blue-500 block sm:hidden">What is PayPal?</a>
                   </div>
                 </div>
-                <div className="pl-4 sm:pl-[36px]">
+                <div>
                   <label
                     htmlFor="message"
                     className="block my-2 text-sm font-medium text-gray-900"
@@ -113,7 +112,7 @@ function PaymentPage() {
                     placeholder="Enter your comment..."
                     defaultValue=""
                   />
-                  <div className="lg:w-1/2 mx-auto sm:w-full">
+                  <div className="w-full">
                     <PayPalPayment />
                   </div>
                 </div>

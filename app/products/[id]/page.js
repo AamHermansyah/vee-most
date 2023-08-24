@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import productPicture from "../../../assets/vee-store-product.png";
+import productPicture from "@/assets//vee-store-product.png";
 import Header from "@/components/Header";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
@@ -9,9 +9,9 @@ import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import printer from "../../../assets/printer.png";
-import mail from "../../../assets/mail.png";
-import blueMail from "../../../assets/mail-blue.png"
+import printer from "@/assets//printer.png";
+import mail from "@/assets//mail.png";
+import blueMail from "@/assets//mail-blue.png"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Description from "@/app/description/description";
 
@@ -154,7 +154,7 @@ const Products = () => {
         </div>
       </main>
       <div className="mt-[400px] md:mt-[410px] lg:-mt-[170px]">
-        <Description/>
+        <Description />
       </div>
     </>
   );

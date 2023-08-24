@@ -1,7 +1,7 @@
 import React from "react";
 import LearnMore from "../pages/home/LearnMore";
-import Chat from "../../assets/icon-chat-bot.png";
-import logo from "../../assets/logo.webp";
+import Chat from "@/assets/icon-chat-bot.png";
+import logo from "@/assets/logo.webp";
 import Image from "next/image";
 import { PersonOutline, ShoppingCartOutlined } from "@mui/icons-material";
 
