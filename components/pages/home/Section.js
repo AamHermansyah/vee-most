@@ -37,7 +37,7 @@ const products = [
 const AllProductSection = () => {
   const [type, setType] = useState("all-products");
   return (
-    <section className="relative px-4 w-full py-10 flex flex-col items-center justify-center gap-10 overflow-hidden">
+    <section className="relative px-4 w-full py-10 flex flex-col items-center justify-center gap-10 overflow-y-clip bg-white">
       <p className="text-[14px] lg:text-[20px] text-[#737373] font-[400]">
         choose wisely, succeed effortlessly
       </p>
